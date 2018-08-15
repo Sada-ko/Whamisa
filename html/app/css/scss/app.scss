@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i&subset=cyrillic');
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	/* Margin bottom by footer height */
+	margin-bottom: 280px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.navbar{
+	padding-top: 2rem;
+
+	// .navbar-holder{
+		// z-index: -1;
+
+		.navbar-brand{
+			position: absolute;
+			text-align: center;
+			width: 100%;
+			left: 0;
+			right: 0;
+			display: inline-block;
+			background-image: url('/img/whamisa-logo.gif');
+			background-size: contain;
+			height: 75px;
+			width: 84px;
+			margin: auto;
+
+			&:hover{
+				// transform: scale(1.05);
+				opacity: .7;	
+			}
+		}
+	// }
+
+	.navbar-nav{
+		li{	
+			padding-left: 1rem
+		}
+	}
+
+	.header-icon-link{
+		padding: 0 !important;
+		border: none;
+		text-align: center;
+		display: block;
+
+		span{
+			color: $text-muted-color;
+			text-transform: uppercase;
+			letter-spacing: .025rem;
+			font-size: 65%;
+			display: block;
+			transition: .2s;
+		}
+
+		&:hover span{
+			color: $link-active-color;
+		}
+
+		svg.active{
+			display: none;
+		}
+	}
+
+	.active .header-icon-link{
+		font-weight: normal;
+
+		span{
+			color: $link-active-color;
+		}
+
+		svg{
+			display: none;
+
+			&.active{
+				display: inline-block;
+			}
+		}
+	}
+}
+
+a {
+	@include link-style($link-color, $link-hover-color);
+
+	&.inside {
+		@include inside-link-style($link-color, $link-hover-color);
+	}
+}
+
+.color-invert {
+	color: white;
+
+	a {
+		@include link-style($white, $button-base);
+	}
+
+	a.inside {
+		@include inside-link-style($white, $button-base);
+	}
+
+	.text-muted {
+		color: transparentize($white, .7);
+	}
+}
+
+.footer {
+	background-image: url('/img/rose-pattern-bg.jpg');
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 280px; /* Set the fixed height of the footer here */
+	padding-top: 60px;
+
+	h3{
+		text-transform: uppercase;
+		letter-spacing: .025rem;
+		font-size: 1rem
+	}
+
+	.navbar-brand{
+		display: inline-block;
+		background-image: url('/img/whamisa-logo-black.png');
+		background-size: contain;
+		height: 75px;
+		width: 84px;
+		margin: 0;
+		margin-bottom: 1rem;
+	}
+
+	ul{
+		list-style: none;
+		padding: 0;
+	}
+}
