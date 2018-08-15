@@ -9,9 +9,19 @@ html {
 }
 
 body {
-	/* Margin bottom by footer height */
-	margin-bottom: 280px;
 	font-family: 'Montserrat', sans-serif;
+
+	@include media-breakpoint-up(lg){
+		margin-bottom: 280px;
+	}	
+
+	@include media-breakpoint-down(md) {
+		margin-bottom: 350px;
+	}
+
+	@include media-breakpoint-down(sm) {
+		margin-bottom: 500px;
+	}
 }
 
 .navbar{
@@ -36,6 +46,13 @@ body {
 			&:hover{
 				// transform: scale(1.05);
 				opacity: .7;	
+			}
+
+			@include media-breakpoint-down(sm){
+				margin: 0;
+				// right: auto;
+				// left: 15px;
+				position: relative
 			}
 		}
 	// }
@@ -68,8 +85,23 @@ body {
 		svg.active{
 			display: none;
 		}
+
+
+		// Иконка поиска
+		&.search{
+			span{
+				display: none;
+			}
+		}
+
+		&.search.collapsed{
+			span{
+				display: block;
+			}
+		}
 	}
 
+	
 	.active .header-icon-link{
 		font-weight: normal;
 
@@ -116,7 +148,6 @@ a {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	height: 280px; /* Set the fixed height of the footer here */
 	padding-top: 60px;
 
 	h3{
@@ -126,17 +157,102 @@ a {
 	}
 
 	.navbar-brand{
-		display: inline-block;
+		display: block;
 		background-image: url('/img/whamisa-logo-black.png');
 		background-size: contain;
 		height: 75px;
 		width: 84px;
 		margin: 0;
-		margin-bottom: 1rem;
 	}
 
 	ul{
 		list-style: none;
 		padding: 0;
+
+		li{
+			margin-bottom: .25rem;
+		}
+	}
+
+	.logo-copyright{
+		padding-right: 15px;
+		padding-left: 15px;
+
+		@include media-breakpoint-down(lg){
+			@include make-col(12);
+
+			.logo{
+				@include make-col(2);
+			}
+
+			.copyright{
+				@include make-col(3);
+				padding-top: 2rem;
+			}
+
+			margin-bottom: 1rem;
+		}
+
+		@include media-breakpoint-down(sm){
+			.logo{
+				@include make-col(4);
+			}
+
+			.copyright{
+				@include make-col(8);
+				padding-top: 1.5rem;
+			}
+
+			margin-bottom: 2rem;
+		}
+
+		@include media-breakpoint-up(lg){
+			@include make-col(3);
+
+			.logo, .copyright{
+				@include make-col(12);
+				margin-bottom: 1rem;
+				padding: 0;
+			}
+		}
+
+		
+	}
+
+	.links-list{
+		padding-right: 15px;
+		padding-left: 15px;
+
+		@include media-breakpoint-up(md){
+			@include make-col(4);
+		}
+
+		@include media-breakpoint-up(lg){
+			@include make-col(3);
+		}
+
+		@include media-breakpoint-down(md){
+			@include make-col(4);
+
+			margin-bottom: 1rem;
+		}
+
+		@include media-breakpoint-down(sm){
+			@include make-col(6);
+		}
+	}
+
+	@include media-breakpoint-up(lg){
+		height: 280px;
+	}	
+
+	@include media-breakpoint-down(md) {
+		padding-top: 40px;
+		height: 350px;
+	}
+
+	@include media-breakpoint-down(sm) {
+		padding-top: 30px;
+		height: 500px;
 	}
 }

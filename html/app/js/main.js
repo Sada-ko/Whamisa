@@ -11,7 +11,7 @@
 //= ../../node_modules/bootstrap/js/dist/carousel.js
 //= ../../node_modules/bootstrap/js/dist/button.js
 //= ../../node_modules/bootstrap/js/dist/modal.js
-//= ../../node_modules/bootstrap/js/dist/dropdown.js
+//= ../../node_modules/bootstrap/js/dist/collapse.js
 
 // owl.carousel
 //= ../../node_modules/owl.carousel/dist/owl.carousel.js
