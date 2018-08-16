@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i&subset=cyrillic');
 
-
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
@@ -14,7 +13,7 @@ body {
 
 	@include media-breakpoint-up(lg) {
 		margin-bottom: 280px;
-	}	
+	}
 
 	@include media-breakpoint-down(lg) {
 		margin-bottom: 350px;
@@ -25,12 +24,16 @@ body {
 	}
 }
 
-header{
+header {
+	padding-top: 1rem;
 
-	.navbar-brand{
+	@include media-breakpoint-up(md) {
+		padding-top: 2rem;
+	}
+
+	.navbar-brand {
 		position: absolute;
 		text-align: center;
-		width: 100%;
 		left: 0;
 		right: 0;
 		display: inline-block;
@@ -40,134 +43,156 @@ header{
 		width: 84px;
 		margin: auto;
 
-		&:hover{
-			opacity: .7;	
+		&:hover {
+			opacity: .7;
 		}
 
 		@include media-breakpoint-down(sm) {
 			margin: 0;
+			margin-right: auto;
 			position: relative;
 			height: 62px;
 			width: 70px;
 		}
 	}
 
-	.icons-menu{
-		li{	
+	.icons-menu {
+
+		li {
 			padding-left: 1rem;
 			list-style: none;
 		}
 
-		.nav-link{
+		.nav-link {
 			color: black;
 
-			&:hover{
+			&:hover {
 				color: $red;
 			}
 		}
 
-		.navbar{
+		.navbar {
 			padding: 0;
 
-			@include media-breakpoint-down(sm){
+			@include media-breakpoint-down(sm) {
 				display: none;
 			}
 		}
 	}
 
-	.header-icon-link{
+	.header-icon-link {
 		padding: 0 !important;
 		border: none;
 		text-align: center;
 		display: block;
 
-		span{
+		span {
 			color: $text-muted-color;
 			font-size: 65%;
 			display: block;
 			transition: .2s;
 		}
 
-		&:hover span{
+		&:hover span {
 			color: $link-active-color;
 		}
 
-		svg.active{
+		svg.active {
 			display: none;
 		}
 	}
 
-	.active .header-icon-link{
+	.active .header-icon-link {
 		font-weight: normal;
 
-		span{
+		span {
 			color: $link-active-color;
 		}
 
-		svg{
+		svg {
 			display: none;
 
-			&.active{
+			&.active {
 				display: inline-block;
 			}
 		}
 	}
 
-	// SEARCH
-	.search{
-			// margin-right: 0;
-			position: relative;
+	.navbar-toggler {
+		@include media-breakpoint-up(md) {
+			display: none;
+		}
+	}
 
-		@include media-breakpoint-up(md){
+	// SEARCH	
+	.search-trigger {
+		left: 0;
+		top: 0;
+
+		@include media-breakpoint-up(md) {
 			margin-right: auto;
 		}
 
-		// Search icon
-		.search-trigger{
-			left: 0;
-			top: 0;
-
-			&:focus{
-				color: black
-			}
-
-			span{
-				opacity: 0;
-			}
+		@include media-breakpoint-down(sm) {
+			margin-right: 1rem;
+			margin-top: 2px;
 		}
 
-		.search-trigger.collapsed{
-			span{
-				opacity: 1;
-				display: block;
-			}
+		&:focus {
+			color: black;
 		}
 
-		.search-form {
-
-			@include media-breakpoint-down(md){
-				right: 60px;
-			}
-
-			@include media-breakpoint-up(md){	
-				top: 0;
-			position: absolute;
-				left: 60px;
-			}
-
-			.form-control, button{	
-			// font-size: 65% !important;
-			}
+		span {
+			opacity: 0;
 		}
 	}
 
-	.main-menu{
-		width: 100%;
+	.search-trigger.collapsed{
+		span {
+			opacity: 1;
+			display: block;
+		}
 	}
+
+	.search-form {
+  	// width: 100%;
+  	padding-top: 1.5rem;
+
+  	@include media-breakpoint-up(md) {
+  		padding-top: 0;
+  		top: 15px;
+  		position: absolute;
+  		left: 60px;
+  	}
+  }
+
+  .main-menu {
+  	width: 100%;
+  	padding-top: 1.5rem;
+
+  	@include media-breakpoint-down(sm){
+  		padding-top: 0;
+  	}
+
+  	li{
+  		margin: 0 1rem;
+
+  		span{
+  			color: $button-base;
+  		}
+
+  		a{
+  			border: none;
+  			padding: 0;
+  			position: relative;
+
+  			span{
+  				border: none;
+  			}
+  		}
+  	}
+  }
 }
-
-	
-	
 
 a, .btn-link {
 	@include link-style($link-color, $link-hover-color);
@@ -177,7 +202,7 @@ a, .btn-link {
 	}
 }
 
-.btn{
+.btn {
 	font-weight: normal !important;
 	border: none;
 }
@@ -203,18 +228,36 @@ a, .btn-link {
 	}
 }
 
-.caps-spaced{
+.caps-spaced {
 	text-transform: uppercase;
 	letter-spacing: .025rem;
 }
-
-
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 /* Carousel base class */
 .carousel {
 	padding-bottom: 40px;
+
+	@include media-breakpoint-down(lg) {
+		margin: 0;
+		width: 100%;
+		max-width: none;
+		padding-left: 0;
+		padding-right: 0;
+		// margin-right: -15px;
+		// margin-left: -15px;
+
+		.carousel-caption {
+			right: calc(14% + 10px);
+			left: 15px;
+			top: 3rem;
+		}
+
+		h1 {
+			font-size: 2.25rem;
+		}
+	}
 
 	.carousel-control-prev,
 	.carousel-control-next {
@@ -226,10 +269,18 @@ a, .btn-link {
 
 	.carousel-control-next {
 		right: -30px;
+
+		@include media-breakpoint-down(sm) {
+			right: 10px;
+		}
 	}
 
 	.carousel-control-prev {
 		left: -30px;
+
+		@include media-breakpoint-down(sm) {
+			left: 10px;
+		}
 	}
 
 	h1 {
@@ -246,84 +297,56 @@ a, .btn-link {
 		position: relative;
 	}
 
-	.carousel-indicators{
+	.carousel-indicators {
 		bottom: 0;
 
-		li{
+		li {
 			width: 10px;
 			height: 10px;
 			border-radius: 10px;
 			border: 1px solid $button-base;
 			background-color: transparent;
 
-			&.active{
+			&.active {
 				background-color: $button-base;
 			}
 		}
 	}
-	
 
-	@include media-breakpoint-down(md) {
+  /* Since positioning the image, we need to help out the caption */
+  .carousel-caption {
+  	top: 4rem;
+  	z-index: 10;
+  	left: 15px;
+  	right: 10%;
+  }
 
-		.carousel-caption {
-			right: calc(14% + 10px);
-			left: 15px;
-			top: 3rem;
-		}
+  /* Declare heights because of positioning of img element */
+  .carousel-item {
+  	min-height: 20rem;
 
-		h1 {
-			font-size: 2.25rem;
-		}
+  	@include media-breakpoint-down(sm) {
+  		min-height: 15rem;
+  	}
+  }
 
-		.carousel-control-prev,
-		.carousel-control-next {
-			// width: 7%;
-		}
-
-		.carousel-control-next {
-			// right: 10px;
-		}
-
-		.carousel-control-prev {
-			// right: 7%;
-		}
-	}
 }
-
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-	top: 4rem;
-	z-index: 10;
-	left: 15px;
-	right: 10%;
-}
-
-/* Declare heights because of positioning of img element */
-.carousel-item {
-	min-height: 20rem;
-
-	@include media-breakpoint-down(sm) {
-		min-height: 15rem;
-	}
-}
-
 
 // FORMS
-form{
-	.form-control{
+form {
+	.form-control {
 		border: none;
 		background-color: transparentize($text-muted-color, .75);
 	}
 
-	&.search-form{
+	&.search-form {
 		width: 250px;
 
-		.form-control{
+		.form-control {
 			width: 150px;
 		}
 	}
 }
-
 
 .footer {
 	background-image: url('/img/rose-pattern-bg.jpg');
@@ -334,7 +357,7 @@ form{
 	@include media-breakpoint-up(lg) {
 		padding-top: 40px;
 		height: 280px;
-	}	
+	}
 
 	@include media-breakpoint-down(lg) {
 		padding-top: 40px;
@@ -346,12 +369,12 @@ form{
 		height: 500px;
 	}
 
-	h3{
+	h3 {
 		font-size: 1rem;
 		margin-bottom: .75rem;
 	}
 
-	.navbar-brand{
+	.navbar-brand {
 		display: block;
 		background-image: url('/img/whamisa-logo-black.png');
 		background-size: contain;
@@ -360,27 +383,27 @@ form{
 		margin: 0;
 	}
 
-	ul{
+	ul {
 		list-style: none;
 		padding: 0;
 
-		li{
+		li {
 			margin-bottom: .25rem;
 		}
 	}
 
-	.logo-copyright{
+	.logo-copyright {
 		padding-right: 15px;
 		padding-left: 15px;
 
 		@include media-breakpoint-down(lg) {
 			@include make-col(12);
 
-			.logo{
+			.logo {
 				@include make-col(2);
 			}
 
-			.copyright{
+			.copyright {
 				@include make-col(3);
 				padding-top: 2rem;
 			}
@@ -388,12 +411,12 @@ form{
 			margin-bottom: 1rem;
 		}
 
-		@include media-breakpoint-down(sm){
-			.logo{
+		@include media-breakpoint-down(sm) {
+			.logo {
 				@include make-col(4);
 			}
 
-			.copyright{
+			.copyright {
 				@include make-col(8);
 				padding-top: 1.5rem;
 			}
@@ -401,18 +424,18 @@ form{
 			margin-bottom: 2rem;
 		}
 
-		@include media-breakpoint-up(lg){
+		@include media-breakpoint-up(lg) {
 			@include make-col(3);
 
-			.logo, .copyright{
+			.logo, .copyright {
 				@include make-col(12);
 				margin-bottom: 1rem;
 				padding: 0;
 			}
-		}		
+		}
 	}
 
-	.links-list{
+	.links-list {
 		padding-right: 15px;
 		padding-left: 15px;
 
@@ -434,5 +457,4 @@ form{
 			@include make-col(6);
 		}
 	}
-
 }

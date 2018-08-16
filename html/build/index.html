@@ -26,21 +26,24 @@
 <body>
 	<header>
 
-
-		<div class="navbar icons-menu container">
+		<div class="navbar navbar-light icons-menu container">
 
 			<a class="navbar-brand text-hide" href="#">whamisa</a>
 
 			<!-- SEARCH -->
-			<div class="search">
-				<a class="header-icon-link caps-spaced search-trigger collapsed" data-toggle="collapse" href="#collapseSearch">
-					<i class="fal fa-search"></i>
-					<span>Поиск</span>
-				</a>
+			<a class="header-icon-link caps-spaced search-trigger collapsed" data-toggle="collapse" href="#collapseSearch">
+				<i class="fal fa-search"></i>
+				<span>Поиск</span>
+			</a>
 
-				<form id="collapseSearch" class="search-form collapse form-inline">
-					<input class="form-control form-control-sm mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-					<button class="btn btn-sm btn-link caps-spaced" type="submit">Найти</button>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div id="collapseSearch" class="search-form collapse navbar-collapse">
+				<form  class="form-inline form-row">
+					<input class="form-control col-auto form-control-sm mr-sm-2" type="text" placeholder="Например, лосьон" aria-label="Search">
+					<button class="btn btn-sm btn-link col-auto caps-spaced" type="submit">Найти</button>
 				</form>
 			</div>
 
@@ -78,48 +81,48 @@
 		<nav class="navbar navbar-expand-md navbar-light">
 			<div class="container position-relative">
 
-				<!-- <div class="navbar-holder"> -->
-					
-					<!-- </div> -->
-
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-
-					
-					<!-- MAIN MENU -->
-					<div class="collapse navbar-collapse" id="navbarCollapse">
-						<div class="main-menu">
-							<ul class="nav justify-content-center">
-								<li class="nav-item">
-									<a class="nav-link" href="#">Active</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#">Link</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link active" href="#">Link</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#">Disabled</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#">Link</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#">Disabled</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#">Link</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#">Disabled</a>
-								</li>
-							</ul>
-						</div>
+				<!-- MAIN MENU -->
+				<div class="collapse navbar-collapse" id="navbarCollapse">
+					<div class="main-menu caps-spaced">
+						<ul class="nav justify-content-center">
+							<li class="nav-item">
+								<a class="nav-link inside" href="#">
+									<span><i class="fas fa-seedling"></i></span>
+									Whamisa
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Лицо</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link active" href="#">Тело</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Волосы</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Дети</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Мужчины</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Солнце</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									Акции
+									<span class="fa-stack fa-xs position-absolute ml-1">
+										<i class="fas fa-certificate fa-stack-2x"></i>
+										<i class="fas fa-percentage fa-stack-1x fa-inverse"></i>
+									</span>
+								</a>
+							</li>
+						</ul>
 					</div>
 				</div>
-			</nav>
+			</div>
+		</nav>
 	</header>
 
 	<!-- Begin page content -->
@@ -127,8 +130,8 @@
 		
 		<!-- CAROUSEL -->
 		<section>
-			<div class="container">
-				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<div class="container-fluid">
+				<div id="myCarousel" class="container carousel slide" data-ride="carousel">
 					<ol class="carousel-indicators">
 						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 						<li data-target="#myCarousel" data-slide-to="1" class=""></li>
@@ -168,7 +171,6 @@
 				</div>
 			</div>
 		</section>
-
 
 	</main>
 

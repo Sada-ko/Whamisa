@@ -8203,95 +8203,112 @@ body {
     body {
       margin-bottom: 500px; } }
 
-header .navbar-brand {
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  left: 0;
-  right: 0;
-  display: inline-block;
-  background-image: url("/img/whamisa-logo.gif");
-  -webkit-background-size: contain;
-          background-size: contain;
-  height: 75px;
-  width: 84px;
-  margin: auto; }
-  header .navbar-brand:hover {
-    opacity: .7; }
-  @media (max-width: 767.98px) {
-    header .navbar-brand {
-      margin: 0;
-      position: relative;
-      height: 62px;
-      width: 70px; } }
-
-header .icons-menu li {
-  padding-left: 1rem;
-  list-style: none; }
-
-header .icons-menu .nav-link {
-  color: black; }
-  header .icons-menu .nav-link:hover {
-    color: #ff2c55; }
-
-header .icons-menu .navbar {
-  padding: 0; }
-  @media (max-width: 767.98px) {
-    header .icons-menu .navbar {
-      display: none; } }
-
-header .header-icon-link {
-  padding: 0 !important;
-  border: none;
-  text-align: center;
-  display: block; }
-  header .header-icon-link span {
-    color: #cacaca;
-    font-size: 65%;
-    display: block;
-    -webkit-transition: .2s;
-    -o-transition: .2s;
-    transition: .2s; }
-  header .header-icon-link:hover span {
-    color: #ff2c55; }
-  header .header-icon-link svg.active {
-    display: none; }
-
-header .active .header-icon-link {
-  font-weight: normal; }
-  header .active .header-icon-link span {
-    color: #ff2c55; }
-  header .active .header-icon-link svg {
-    display: none; }
-    header .active .header-icon-link svg.active {
-      display: inline-block; }
-
-header .search {
-  position: relative; }
+header {
+  padding-top: 1rem; }
   @media (min-width: 768px) {
-    header .search {
-      margin-right: auto; } }
-  header .search .search-trigger {
+    header {
+      padding-top: 2rem; } }
+  header .navbar-brand {
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    display: inline-block;
+    background-image: url("/img/whamisa-logo.gif");
+    -webkit-background-size: contain;
+            background-size: contain;
+    height: 75px;
+    width: 84px;
+    margin: auto; }
+    header .navbar-brand:hover {
+      opacity: .7; }
+    @media (max-width: 767.98px) {
+      header .navbar-brand {
+        margin: 0;
+        margin-right: auto;
+        position: relative;
+        height: 62px;
+        width: 70px; } }
+  header .icons-menu li {
+    padding-left: 1rem;
+    list-style: none; }
+  header .icons-menu .nav-link {
+    color: black; }
+    header .icons-menu .nav-link:hover {
+      color: #ff2c55; }
+  header .icons-menu .navbar {
+    padding: 0; }
+    @media (max-width: 767.98px) {
+      header .icons-menu .navbar {
+        display: none; } }
+  header .header-icon-link {
+    padding: 0 !important;
+    border: none;
+    text-align: center;
+    display: block; }
+    header .header-icon-link span {
+      color: #cacaca;
+      font-size: 65%;
+      display: block;
+      -webkit-transition: .2s;
+      -o-transition: .2s;
+      transition: .2s; }
+    header .header-icon-link:hover span {
+      color: #ff2c55; }
+    header .header-icon-link svg.active {
+      display: none; }
+  header .active .header-icon-link {
+    font-weight: normal; }
+    header .active .header-icon-link span {
+      color: #ff2c55; }
+    header .active .header-icon-link svg {
+      display: none; }
+      header .active .header-icon-link svg.active {
+        display: inline-block; }
+  @media (min-width: 768px) {
+    header .navbar-toggler {
+      display: none; } }
+  header .search-trigger {
     left: 0;
     top: 0; }
-    header .search .search-trigger:focus {
+    @media (min-width: 768px) {
+      header .search-trigger {
+        margin-right: auto; } }
+    @media (max-width: 767.98px) {
+      header .search-trigger {
+        margin-right: 1rem;
+        margin-top: 2px; } }
+    header .search-trigger:focus {
       color: black; }
-    header .search .search-trigger span {
+    header .search-trigger span {
       opacity: 0; }
-  header .search .search-trigger.collapsed span {
+  header .search-trigger.collapsed span {
     opacity: 1;
     display: block; }
-  @media (max-width: 991.98px) {
-    header .search .search-form {
-      right: 60px; } }
-  @media (min-width: 768px) {
-    header .search .search-form {
-      top: 0;
-      position: absolute;
-      left: 60px; } }
-
-header .main-menu {
-  width: 100%; }
+  header .search-form {
+    padding-top: 1.5rem; }
+    @media (min-width: 768px) {
+      header .search-form {
+        padding-top: 0;
+        top: 15px;
+        position: absolute;
+        left: 60px; } }
+  header .main-menu {
+    width: 100%;
+    padding-top: 1.5rem; }
+    @media (max-width: 767.98px) {
+      header .main-menu {
+        padding-top: 0; } }
+    header .main-menu li {
+      margin: 0 1rem; }
+      header .main-menu li span {
+        color: #a02842; }
+      header .main-menu li a {
+        border: none;
+        padding: 0;
+        position: relative; }
+        header .main-menu li a span {
+          border: none; }
 
 a, .btn-link {
   text-decoration: none;
@@ -8426,7 +8443,23 @@ a, .btn-link {
 -------------------------------------------------- */
 /* Carousel base class */
 .carousel {
-  padding-bottom: 40px; }
+  padding-bottom: 40px;
+  /* Since positioning the image, we need to help out the caption */
+  /* Declare heights because of positioning of img element */ }
+  @media (max-width: 1199.98px) {
+    .carousel {
+      margin: 0;
+      width: 100%;
+      max-width: none;
+      padding-left: 0;
+      padding-right: 0; }
+      .carousel .carousel-caption {
+        right: -webkit-calc(14% + 10px);
+        right: calc(14% + 10px);
+        left: 15px;
+        top: 3rem; }
+      .carousel h1 {
+        font-size: 2.25rem; } }
   .carousel .carousel-control-prev,
   .carousel .carousel-control-next {
     width: 20px;
@@ -8435,8 +8468,14 @@ a, .btn-link {
     border: none; }
   .carousel .carousel-control-next {
     right: -30px; }
+    @media (max-width: 767.98px) {
+      .carousel .carousel-control-next {
+        right: 10px; } }
   .carousel .carousel-control-prev {
     left: -30px; }
+    @media (max-width: 767.98px) {
+      .carousel .carousel-control-prev {
+        left: 10px; } }
   .carousel h1 {
     font-weight: bold;
     font-size: 4rem;
@@ -8456,28 +8495,16 @@ a, .btn-link {
       background-color: transparent; }
       .carousel .carousel-indicators li.active {
         background-color: #a02842; }
-  @media (max-width: 991.98px) {
-    .carousel .carousel-caption {
-      right: -webkit-calc(14% + 10px);
-      right: calc(14% + 10px);
-      left: 15px;
-      top: 3rem; }
-    .carousel h1 {
-      font-size: 2.25rem; } }
-
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  top: 4rem;
-  z-index: 10;
-  left: 15px;
-  right: 10%; }
-
-/* Declare heights because of positioning of img element */
-.carousel-item {
-  min-height: 20rem; }
-  @media (max-width: 767.98px) {
-    .carousel-item {
-      min-height: 15rem; } }
+  .carousel .carousel-caption {
+    top: 4rem;
+    z-index: 10;
+    left: 15px;
+    right: 10%; }
+  .carousel .carousel-item {
+    min-height: 20rem; }
+    @media (max-width: 767.98px) {
+      .carousel .carousel-item {
+        min-height: 15rem; } }
 
 form .form-control {
   border: none;
