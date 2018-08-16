@@ -8203,72 +8203,95 @@ body {
     body {
       margin-bottom: 500px; } }
 
-.navbar {
-  padding-top: 2.5rem;
-  height: 130px; }
-  .navbar .navbar-brand {
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    left: 0;
-    right: 0;
-    display: inline-block;
-    background-image: url("/img/whamisa-logo.gif");
-    -webkit-background-size: contain;
-            background-size: contain;
-    height: 75px;
-    width: 84px;
-    margin: auto; }
-    .navbar .navbar-brand:hover {
-      opacity: .7; }
-    @media (max-width: 767.98px) {
-      .navbar .navbar-brand {
-        margin: 0;
-        position: relative; } }
-  .navbar .navbar-nav li {
-    padding-left: 1rem; }
-  .navbar .navbar-nav .nav-link {
-    color: black; }
-    .navbar .navbar-nav .nav-link:hover {
-      color: #ff2c55; }
-  .navbar .header-icon-link {
-    padding: 0 !important;
-    border: none;
-    text-align: center;
-    display: block; }
-    .navbar .header-icon-link span {
-      color: #cacaca;
-      font-size: 65%;
-      display: block;
-      -webkit-transition: .2s;
-      -o-transition: .2s;
-      transition: .2s; }
-    .navbar .header-icon-link:hover span {
-      color: #ff2c55; }
-    .navbar .header-icon-link svg.active {
-      display: none; }
-  .navbar .active .header-icon-link {
-    font-weight: normal; }
-    .navbar .active .header-icon-link span {
-      color: #ff2c55; }
-    .navbar .active .header-icon-link svg {
-      display: none; }
-      .navbar .active .header-icon-link svg.active {
-        display: inline-block; }
-  .navbar .search .search-trigger {
+header .navbar-brand {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  left: 0;
+  right: 0;
+  display: inline-block;
+  background-image: url("/img/whamisa-logo.gif");
+  -webkit-background-size: contain;
+          background-size: contain;
+  height: 75px;
+  width: 84px;
+  margin: auto; }
+  header .navbar-brand:hover {
+    opacity: .7; }
+  @media (max-width: 767.98px) {
+    header .navbar-brand {
+      margin: 0;
+      position: relative;
+      height: 62px;
+      width: 70px; } }
+
+header .icons-menu li {
+  padding-left: 1rem;
+  list-style: none; }
+
+header .icons-menu .nav-link {
+  color: black; }
+  header .icons-menu .nav-link:hover {
+    color: #ff2c55; }
+
+header .icons-menu .navbar {
+  padding: 0; }
+  @media (max-width: 767.98px) {
+    header .icons-menu .navbar {
+      display: none; } }
+
+header .header-icon-link {
+  padding: 0 !important;
+  border: none;
+  text-align: center;
+  display: block; }
+  header .header-icon-link span {
+    color: #cacaca;
+    font-size: 65%;
+    display: block;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s; }
+  header .header-icon-link:hover span {
+    color: #ff2c55; }
+  header .header-icon-link svg.active {
+    display: none; }
+
+header .active .header-icon-link {
+  font-weight: normal; }
+  header .active .header-icon-link span {
+    color: #ff2c55; }
+  header .active .header-icon-link svg {
+    display: none; }
+    header .active .header-icon-link svg.active {
+      display: inline-block; }
+
+header .search {
+  position: relative; }
+  @media (min-width: 768px) {
+    header .search {
+      margin-right: auto; } }
+  header .search .search-trigger {
     left: 0;
     top: 0; }
-    .navbar .search .search-trigger:focus {
+    header .search .search-trigger:focus {
       color: black; }
-    .navbar .search .search-trigger span {
+    header .search .search-trigger span {
       opacity: 0; }
-  .navbar .search .search-trigger.collapsed span {
+  header .search .search-trigger.collapsed span {
     opacity: 1;
     display: block; }
-  .navbar .search .search-form {
-    position: absolute;
-    left: 60px;
-    top: 0; }
+  @media (max-width: 991.98px) {
+    header .search .search-form {
+      right: 60px; } }
+  @media (min-width: 768px) {
+    header .search .search-form {
+      top: 0;
+      position: absolute;
+      left: 60px; } }
+
+header .main-menu {
+  width: 100%; }
 
 a, .btn-link {
   text-decoration: none;

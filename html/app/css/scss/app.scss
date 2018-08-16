@@ -25,9 +25,7 @@ body {
 	}
 }
 
-.navbar{
-	padding-top: 2.5rem;
-	height: 130px;
+header{
 
 	.navbar-brand{
 		position: absolute;
@@ -48,13 +46,16 @@ body {
 
 		@include media-breakpoint-down(sm) {
 			margin: 0;
-			position: relative
+			position: relative;
+			height: 62px;
+			width: 70px;
 		}
 	}
 
-	.navbar-nav{
+	.icons-menu{
 		li{	
-			padding-left: 1rem
+			padding-left: 1rem;
+			list-style: none;
 		}
 
 		.nav-link{
@@ -62,6 +63,14 @@ body {
 
 			&:hover{
 				color: $red;
+			}
+		}
+
+		.navbar{
+			padding: 0;
+
+			@include media-breakpoint-down(sm){
+				display: none;
 			}
 		}
 	}
@@ -104,11 +113,14 @@ body {
 		}
 	}
 
-
 	// SEARCH
 	.search{
-		// position: relative;
+			// margin-right: 0;
+			position: relative;
 
+		@include media-breakpoint-up(md){
+			margin-right: auto;
+		}
 
 		// Search icon
 		.search-trigger{
@@ -132,16 +144,30 @@ body {
 		}
 
 		.search-form {
+
+			@include media-breakpoint-down(md){
+				right: 60px;
+			}
+
+			@include media-breakpoint-up(md){	
+				top: 0;
 			position: absolute;
-			left: 60px;
-			top: 0;
+				left: 60px;
+			}
 
 			.form-control, button{	
 			// font-size: 65% !important;
 			}
 		}
 	}
+
+	.main-menu{
+		width: 100%;
+	}
 }
+
+	
+	
 
 a, .btn-link {
 	@include link-style($link-color, $link-hover-color);
@@ -275,19 +301,6 @@ a, .btn-link {
 /* Declare heights because of positioning of img element */
 .carousel-item {
 	min-height: 20rem;
-
-	// &::before {
-	// 	background-color: black;
-	// 	position: absolute;
-	// 	width: 100%;
-	// 	height: 100%;
-	// 	top: 0;
-	// 	left: 0;
-	// 	opacity: .4;
-	// 	display: block;
-	// 	content: "";
-	// 	z-index: 1;
-	// }
 
 	@include media-breakpoint-down(sm) {
 		min-height: 15rem;
