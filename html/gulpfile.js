@@ -1,17 +1,20 @@
     var gulp          = require('gulp'),
-    sass          = require('gulp-sass'),
-    cssnano       = require('gulp-cssnano'),
-    rename        = require('gulp-rename'),
-    del           = require('del'), // Подключаем библиотеку для удаления файлов и папок
-    autoprefixer  = require('gulp-autoprefixer'),
-    rigger         = require('gulp-rigger'), //склеивает файлы
-    cssimport      = require('gulp-cssimport'), //склеивает файлы с css
-    cache          = require('gulp-cache'), // модуль для кэширования
-    browserSync    = require('browser-sync'),
-    imagemin = require('gulp-imagemin'); // плагин для сжатия PNG, JPEG, GIF и SVG изображений
-    jpegrecompress = require('imagemin-jpeg-recompress'), // плагин для сжатия jpeg
-    pngquant       = require('imagemin-pngquant'), // плагин для сжатия png
-    uglify         = require('gulp-uglify'), // модуль для минимизации JavaScript
+    sass              = require('gulp-sass'),
+    cssnano           = require('gulp-cssnano'),
+    rename            = require('gulp-rename'),
+    del               = require('del'), // Подключаем библиотеку для удаления файлов и папок
+    autoprefixer      = require('gulp-autoprefixer'),
+    rigger            = require('gulp-rigger'), //склеивает файлы
+    cssimport         = require('gulp-cssimport'), //склеивает файлы с css
+    cache             = require('gulp-cache'), // модуль для кэширования
+    browserSync       = require('browser-sync'),
+    imagemin          = require('gulp-imagemin'); // плагин для сжатия PNG, JPEG, GIF и SVG изображений
+    jpegrecompress    = require('imagemin-jpeg-recompress'), // плагин для сжатия jpeg
+    pngquant          = require('imagemin-pngquant'), // плагин для сжатия png
+    uglify            = require('gulp-uglify'), // модуль для минимизации JavaScript
+    postcss           = require('gulp-postcss'),
+    momentumscrolling = require('postcss-momentum-scrolling'),
+
     
     
 // Объект переменная с путями
@@ -61,6 +64,10 @@ gulp.task('browser-sync', function () {
 
 // Styles build​
 gulp.task('style:build', function () {
+    var processors = [
+    momentumscrolling
+    ];
+
     gulp.src(path.src.style) //Выберем наш main.scss
         .pipe(sass()) //Скомпилируем
         .pipe(cssimport())
@@ -69,8 +76,7 @@ gulp.task('style:build', function () {
             cascade: true
         })) //Добавим вендорные префиксы
 
-        // .pipe(cssnano())
-        // .pipe(rename({suffix: '.min'})) //Сожмем
+        .pipe(postcss(processors))
         .pipe(gulp.dest(path.build.css)) //И в build
         .pipe(browserSync.reload({stream: true}));
     });
@@ -100,7 +106,6 @@ gulp.task('html:build', function () {
         .pipe(browserSync.reload({stream: true})); //И перезагрузим наш сервер для обновлений
     });
 
-
 // удаление каталога build
 gulp.task('clean:build', function () {
     del.sync(path.clean);
@@ -115,16 +120,16 @@ gulp.task('cache:clear', function () {
 
 gulp.task('build', [
     // 'clean:build',
-    'image:build',
-    'html:build',
     'style:build',
-    'js:build'
+    'js:build',
+    'image:build',
+    'html:build'
     ]);
 
 gulp.task('watch', ['browser-sync'], function () {
-    gulp.watch([path.watch.html], ['html:build']);
     gulp.watch([path.watch.style], ['style:build']);
     gulp.watch(path.watch.img, ['image:build']);
+    gulp.watch([path.watch.html], ['html:build']);
     gulp.watch([path.watch.js], ['js:build']);
 });
 

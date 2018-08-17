@@ -80,3 +80,25 @@
   background: linear-gradient(to right,  $from 0%, $to 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=0 ); /* IE6-9 */
 }
+
+@mixin full-fit {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+@mixin zoom-background {
+  @include full-fit;
+  overflow: hidden;
+
+  .zoom-pic {
+    @include full-fit;
+    transition: .1s;
+  }
+
+  &:hover .zoom-pic {
+    transform: scale(1.05);
+  }
+}
