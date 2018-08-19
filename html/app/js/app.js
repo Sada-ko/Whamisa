@@ -1,10 +1,4 @@
-// для проверки
-$(function () {
-    // $('body').fadeOut();
-});
-
-
-// Филл-бокс
+// Fill-Box
 $(document).ready(function () {
 	(function ($, window, document) {
 		$.fn.fillBox = function () {
@@ -28,3 +22,29 @@ $(document).ready(function () {
 $(document).ready(function () {
 	$('.fill-box').fillBox();
 });
+
+
+// Bootstrap Carousel
+$('.carousel').carousel()
+
+$('.carousel').carousel({
+  interval: 2000000
+})
+
+// OWL-carousel
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:15,
+    nav:true,
+    responsive:{
+        0:{
+            items:2
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})

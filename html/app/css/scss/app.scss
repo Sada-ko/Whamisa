@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i&subset=cyrillic');
-
+// @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&subset=cyrillic-ext');
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
@@ -75,10 +74,18 @@ header {
 			padding: 0;
 
 			@include media-breakpoint-down(sm) {
-				display: none;
+				// display: none;
 			}
+			@include media-breakpoint-up(md) {
+				position: absolute;
+				top: -55px;
+				right: 15px;
+			}
+
 		}
 	}
+
+
 
 	.header-icon-link {
 		padding: 0 !important;
@@ -170,8 +177,9 @@ header {
 .main-menu {
 	width: 100%;
 	padding-top: 1.5rem;
+	margin-bottom: .5rem;
 
-	@include media-breakpoint-down(sm){
+	@include media-breakpoint-down(sm) {
 		padding-top: 0;
 	}
 
@@ -182,24 +190,25 @@ header {
 			border: none;
 			padding: 0;
 			position: relative;
-			z-index: 2;
-
-			span{
-				color: $button-base;
-				border: none;
-				z-index: 100;
-			}
 		}
 	}
+}
+
+// SCROLLING
+.main-menu{
 
 	&.scrolling{
+
+		@include media-breakpoint-up(md) {
+			display: none;
+		}
 
 		li{
 			margin-left: 0;
 		}
 
 		.nav-item:last-child {
-			margin-right: 150px;
+			padding-right: 40px;
 		}
 
 		a{
@@ -210,10 +219,6 @@ header {
 			padding: 0;
 			display: flex;
 			list-style: none;
-
-			@include media-breakpoint-up(md){
-				display: none;
-			}
 		}
 
 		@media only screen and (max-width: 400px) {
@@ -236,22 +241,18 @@ header {
 			.menu-item { margin-right: 15px; }
 		}
 
-		@include media-breakpoint-up(md){
-				.menu-item { margin-right: 30px !important; }
-			}
+		@include media-breakpoint-up(md) {
+			.menu-item { margin-right: 30px !important; }
+		}
 	}
 }
 
 .menuLimiter {
-  width: 100%;
+	width: 100%;
 
   /* Зададим возможность горизонтальной прокрутки */
   overflow-x: scroll;
-
-  /* Для Сафари дополнительно зададим инерцию при прокрутке.
-  С инерцией меню будет «оттягиваться» при попытке прокрутить
-  его за его пределы. */
-  // -webkit-overflow-scrolling: touch;
+  overflow-y: hidden;
 
   /* Добавим дополнительный нижнее поле
   элементу, в котором прокручивается меню */
@@ -262,13 +263,13 @@ header {
   margin-bottom: -20px;
 
   mask-image: linear-gradient(
-      90deg,
-      transparent 0, rgba(0, 0, 0, .25) 9px,
-      #000 18px,
-      #000 calc(100% - 18px),
-      rgba(0, 0, 0, .25) calc(100% - 9px),
-      transparent
-    );
+  	90deg,
+  	transparent 0, rgba(0, 0, 0, .25) 9px,
+  	#000 18px,
+  	#000 calc(100% - 18px),
+  	rgba(0, 0, 0, .25) calc(100% - 9px),
+  	transparent
+  	);
 
   &.dragscroll {
   	cursor: grab;
@@ -279,6 +280,23 @@ header {
   /* Спрячем всё, что выходит за границы родителя */
   overflow: hidden;
   padding-right: 15px;
+}
+
+// DROPDOWN
+.dropdown-menu {
+	padding: 1rem;
+	font-size: 80%;
+	left: -20px;
+	z-index: 1000;
+
+	a{
+		@include link-style($link-color, $link-hover-color);
+		margin-bottom: .25rem;
+
+		&:hover{
+			background: none;
+		}
+	}
 }
 
 a, .btn-link {
@@ -298,14 +316,27 @@ a, .btn-link {
 	color: $text-muted-color !important;
 }
 
-.adv-block-head{
-	text-align: center;
-	font-size: 1rem;
-}
+.adv-block{
+	.adv-block-head{
+		text-align: center;
+		font-size: 1rem;
+	}
 
-.adv-block-body{
-	h3{
-		font-size: 1.25rem
+	.adv-block-head{
+		margin-bottom: 1rem;
+	}
+
+	.adv-block-body{
+		h3{
+			font-size: 1.25rem
+		}
+	}
+	h4{
+		font-size: 1rem
+	}
+
+	.pic{
+		position: relative;
 	}
 }
 
@@ -329,7 +360,6 @@ a, .btn-link {
 	50% { background-position: 100% 0% }
 	100% { background-position: 0% 0% }
 }
-​
 ​
 .base-gradient {
 	@include gradient($base-gradient-start, $base-gradient-end);
@@ -357,33 +387,51 @@ a, .btn-link {
 	letter-spacing: .025rem;
 }
 
+.crimson {
+	color: $button-base !important;
+}
+
 .zoom-background {
-  @include zoom-background;
+	@include zoom-background;
 }
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 /* Carousel base class */
 .carousel {
-	margin-bottom: 6rem;
+
+	&.main-carousel{		
+		margin-bottom: 5.5rem;
+
+		@include media-breakpoint-down(md) {
+			margin-bottom: 4rem;
+		}
+		@include media-breakpoint-down(sm) {
+			display: none;
+		}
+	}
 
 	.carousel-control-prev,
 	.carousel-control-next {
-		width: 20px;
+		width: 40px;
 		color: $button-base;
 		opacity: 1;
 		border: none;
+
+		@include media-breakpoint-down(sm) {
+			display: none;
+		}
 	}
 
 	&.carousel-slim{
 
-		@include media-breakpoint-down(sm){	
+		@include media-breakpoint-down(sm) {	
 			margin-left: -15px;
 			margin-right: -15px;
 		}
 
 		.carousel-control-next {
-			right: -30px;
+			right: -40px;
 
 			@include media-breakpoint-down(sm) {
 				right: 10px;
@@ -391,18 +439,12 @@ a, .btn-link {
 		}
 
 		.carousel-control-prev {
-			left: -30px;
+			left: -40px;
 
 			@include media-breakpoint-down(sm) {
 				left: 10px;
 			}
 		}
-	}
-
-	h1 {
-		font-weight: bold;
-		font-size: 4rem;
-		text-align: left;
 	}
 
 	.carousel-header {
@@ -447,35 +489,33 @@ a, .btn-link {
 	}
 }
 
-
 // WEEK OFFER
 .week-offer{
-	margin-bottom: 5rem;
+	margin-bottom: 4rem;
 
-	.adv-block-head{
-		margin-bottom: 1.5rem;
+	@include media-breakpoint-down(sm) {
+		margin-bottom: 3rem;
 	}
 
 	.adv-block-body{
 		@include make-row();
 		margin: 0;
 
-		&:hover{
-			.adv-block-info{
-				color: black;
-			}
+		.adv-block-info{
+			color: black;
 		}
 	}
 
 	.adv-block-content{
 		border: none;
 
-		@include media-breakpoint-down(lg){
+		@include media-breakpoint-down(lg) {
 			@include make-col(12);
 		}
 
-		@include media-breakpoint-up(lg){
+		@include media-breakpoint-up(lg) {
 			@include make-col(8);
+			@include make-col-offset(2);
 		}
 
 		&:hover .zoom-pic {
@@ -483,34 +523,40 @@ a, .btn-link {
 		}
 	}
 
+	.adv-block-info{
+		margin-bottom: .5rem;
+	}
+
 	.adv-block-name{
-		margin-bottom: 1.5rem;
+		margin-bottom: .75rem;
+
+		@include media-breakpoint-up(md) {
+			margin-bottom: 1rem;
+		}
 	}
 
 	.pic{
 		position: relative;
 		height: 250px;
 
-		@include media-breakpoint-down(md){
+		@include media-breakpoint-down(md) {
 			@include make-col(12);
-			margin-bottom: 2rem;
+			margin-bottom: 1.25rem;
 		}
 
-		@include media-breakpoint-up(md){
+		@include media-breakpoint-up(md) {
 			@include make-col(5);
-			padding-right: 15px;
-			padding-left: 15px;
 		}
 	}
 
 	.info{
 		min-height: 200px;
 
-		@include media-breakpoint-down(md){
+		@include media-breakpoint-down(md) {
 			@include make-col(12);
 		}
 
-		@include media-breakpoint-up(md){
+		@include media-breakpoint-up(md) {
 			@include make-col(7);
 			padding-right: 15px;
 			padding-left: 15px;
@@ -520,6 +566,7 @@ a, .btn-link {
 
 .price{
 	font-size: 2.25rem;
+	font-weight: bold;
 
 	.new-price{
 		color: $button-base;
@@ -534,16 +581,118 @@ a, .btn-link {
 
 // ARTICLES TEASE
 .articles-tease{
-	margin-bottom: 5rem;
+	margin-bottom: 4rem;
 
-	.ferment{
-		// @include make-row();
+	@include media-breakpoint-down(sm) {
+		margin-bottom: 3rem;
 	}
 
 	h2{
 		font-size: 2.25rem;
+		margin-bottom: 1.25rem;
+	}
+
+	h3, .h3 {
+		font-size: 1.5rem;
+	}
+
+	@include media-breakpoint-down(sm) {
+		h2{
+			font-size: 2rem;
+			margin-bottom: 1.25rem;
+		}
+
+		h3, .h3 {
+			font-size: 1.25rem;
+		}
 	}
 }
+
+.articles-tease{
+
+	.pic, .carousel-caption{
+		min-height: 400px;
+
+		@include media-breakpoint-down(md) {
+			min-height: 200px;
+		}
+	}
+
+	.ferment{
+		@include make-row();
+	}
+
+	.pic{
+		@include make-col(4);
+		padding: 0 15px;
+
+		@include media-breakpoint-down(sm) {
+			display: none;			
+		}
+	}
+
+	.carousel-caption{
+		@include make-col(8);
+		padding: 0 15px;
+		position: relative;
+		top: 0;
+		z-index: 1;
+		left: 0;
+		right: 0;
+		color: black;
+		text-align: left;
+
+		@include media-breakpoint-down(sm) {
+			@include make-col(12);
+		}
+
+		.inner{
+			background-size: 200% !important;
+			background-position: right !important;
+			height: 100%;
+
+			@include media-breakpoint-down(sm) {
+				padding: 2rem 15px 2.5rem 15px;
+			}
+
+			@include media-breakpoint-up(sm) {
+				padding: 3rem 4rem;
+			}
+
+			.text{
+				max-width: 600px;
+				margin: 0;
+				padding: 0;
+			}
+		}
+	}
+}
+
+// OWL-CAROUSEL
+.owl-carousel{
+	.item {
+		min-height: 10rem;
+	}
+
+	.owl-base-link{
+		display: block;
+		border: none;
+
+		.pic{
+			width: 100%;
+			height: 180px;
+			margin-bottom: .5rem;
+		}
+
+		.price, .new-price{
+			padding-top: 1rem;
+			font-size: 1.23rem;
+			color: black;
+			font-weight: 400;
+		}
+	}
+}
+
 
 // FORMS
 form {
@@ -563,6 +712,7 @@ form {
 
 .footer {
 	background-image: url('../img/rose-pattern-bg.jpg');
+	background-size: cover;
 	position: absolute;
 	bottom: 0;
 	width: 100%;

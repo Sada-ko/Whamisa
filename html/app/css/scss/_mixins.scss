@@ -34,7 +34,8 @@
     }
   }
 
-  &.active, .active > &, .show > & {
+  &.active, .active > & {
+  // &.active, .active > &, .show > & {
     cursor: default;
     font-weight: bold;
     border: none;
