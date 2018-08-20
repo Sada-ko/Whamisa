@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Whamisa | Базовая страничка</title>
+
+	<link href="css/main.css" rel="stylesheet" />
+
+	<!--Favicons-->
+	<link rel="icon" href="favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+	<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ab0635">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+
+	<!-- Montserrat Font -->
+	<!-- Почему-то если подключать через CSS-import, не работает знак рубля -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i&amp;subset=cyrillic" rel="stylesheet">
+</head>
+
+<body>
+
+	<header>
+	
+			<!-- LOGO and SEACRH -->
+			<div class="navbar navbar-light icons-menu container">
+	
+				<a class="navbar-brand text-hide" href="#">whamisa</a>
+	
+				<!-- SEARCH TRIGGER -->
+				<a class="header-icon-link caps-spaced search-trigger collapsed" data-toggle="collapse" href="#collapseSearch">
+					<i class="fal fa-search"></i>
+					<span>Поиск</span>
+				</a>
+	
+				<!-- Mobile Hamburger Button -->
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+					<i class="fal fa-bars fa-lg"></i>
+				</button>
+	
+				<!-- SEARCH FORM -->
+				<div id="collapseSearch" class="search-form collapse navbar-collapse">
+					<form  class="d-flex">
+						<input class="form-control flex-grow-1 form-control-sm" type="text" placeholder="Например, лосьон" aria-label="Search">
+						<button class="btn btn-sm btn-link caps-spaced" type="submit">Найти</button>
+					</form>
+				</div>
+	
+				<!-- ENTER-FAVS-CART -->
+				<!-- <ul class="navbar caps-spaced d-none">
+					<li class="nav-item">
+						<a class="nav-link header-icon-link" href="#">
+							<i class="fal fa-heart" data-fa-transform="grow-1"></i>
+							<i class="fas fa-heart active" data-fa-transform="grow-1"></i>
+							<span>Избранное</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link header-icon-link" href="#">
+							<i class="fal fa-shopping-bag" data-fa-transform="grow-2"></i>
+							<i class="fas fa-shopping-bag active" data-fa-transform="grow-2"></i>
+							<span>Корзина</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link header-icon-link" href="#">
+							<i class="fal fa-key" data-fa-transform="grow-2"></i>
+							<i class="fas fa-key active" data-fa-transform="grow-2"></i>
+							<span>Войти</span>
+						</a>
+					</li>
+				</ul> -->
+			</div>
+	
+			<!-- EXPAND NAV and ICONS -->
+			<nav class="navbar navbar-expand-md navbar-light">
+				<div class="container position-relative">
+	
+					<div class="collapse navbar-collapse" id="navbarCollapse">
+	
+						<!-- ENTER-FAVS-CART -->
+						<div class="icons-menu">
+							<ul class="navbar caps-spaced d-flex justify-content-end">
+								<li class="nav-item">
+									<a class="nav-link header-icon-link" href="#">
+										<i class="fal fa-heart" data-fa-transform="grow-1"></i>
+										<i class="fas fa-heart active" data-fa-transform="grow-1"></i>
+										<span>Избранное</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link header-icon-link" href="#">
+										<i class="fal fa-shopping-bag" data-fa-transform="grow-2"></i>
+										<i class="fas fa-shopping-bag active" data-fa-transform="grow-2"></i>
+										<span>Корзина</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link header-icon-link" href="#">
+										<i class="fal fa-key" data-fa-transform="grow-2"></i>
+										<i class="fas fa-key active" data-fa-transform="grow-2"></i>
+										<span>Войти</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+	
+						<!-- MAIN MENU -->
+						<!-- <div class="main-menu caps-spaced">
+							<ul class="nav justify-content-md-center">
+								<li class="nav-item">
+									<a class="nav-link inside" href="#">
+										<i class="fas fa-seedling crimson"></i>
+										Whamisa
+									</a>
+								</li>
+	
+								<li class="nav-item dropdown">
+									<a class="nav-link" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Лицо</a>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="#">Action</a>
+										<a class="dropdown-item" href="#">Another action</a>
+										<a class="dropdown-item" href="#">Something else here</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="#">Separated link</a>
+									</div>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link active" href="#">Тело</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Волосы</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Дети</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Мужчины</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Солнце</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">
+										Акции
+										<span class="fa-stack fa-xs position-absolute ml-1">
+											<i class="fas fa-certificate fa-stack-2x crimson"></i>
+											<i class="fas fa-percentage fa-stack-1x fa-inverse"></i>
+										</span>
+									</a>
+								</li>
+							</ul>
+						</div> -->
+					</div>
+				</div>
+			</nav>
+	
+			<!-- MAIN SCROLLING MENU -->
+			<div class="main-menu scrolling menuWrapper">
+				<div class="menuLimiter container dragscroll">
+					<menu class="caps-spaced">
+						<li class="nav-item">
+							<a class="nav-link inside" href="#">
+								<i class="fas fa-seedling crimson"></i>
+								Whamisa
+							</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Лицо</a>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">Ежедневный уход</a>
+								<a class="dropdown-item" href="#">Еженедельный уход</a>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="#">Тело</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Волосы</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Дети</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Мужчины</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Солнце</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								Акции
+								<span class="fa-stack fa-xs position-absolute ml-1">
+									<i class="fas fa-certificate fa-stack-2x crimson"></i>
+									<i class="fas fa-percentage fa-stack-1x fa-inverse"></i>
+								</span>
+							</a>
+						</li>
+					</menu>
+				</div>
+			</div>
+		</header>
+
+	<!-- Begin page content -->
+	<main role="main">
+		<div class="container">
+			<h1>Заголовок первого уровня<br/>в две строки</h1>
+
+			<p>До&nbsp;меня недавно дошло, что при всей любви к&nbsp;мыльно-рыльным средствам я&nbsp;уже почти два года как храню верность гидрофилкам Мико и&nbsp;Сульвасу (даже больше первой, т.к.&nbsp;ее&nbsp;проще купить). Они до&nbsp;такой степени меня устраивают, что я&nbsp;особо не&nbsp;смотрела в&nbsp;сторону новинок, тем более, что в&nbsp;лучшем случае получила&nbsp;б обычную очищалку без каких-либо бонусов, а&nbsp;в&nbsp;худшем&nbsp;&mdash; нарвалась&nbsp;бы на&nbsp;забитые поры, как это было с&nbsp;бальзамом Балансми.</p>
+			<p>Ну&nbsp;в&nbsp;самом деле, задача гидрофилок&nbsp;&mdash; растворение макияжа, и&nbsp;не&nbsp;стоит особо рассчитывать на&nbsp;какие-то вау-эффекты, поэтому если уж&nbsp;и&nbsp;изменять полюбившимся баночкам, то&nbsp;только с&nbsp;теми средствами, которые претендуют хоть на&nbsp;какую-то оригинальность.</p>
+			<p>Корейская органическая косметика с&nbsp;сертификатами BDIH и&nbsp;EcoCert как раз для этого подходит :)</p>
+
+			<h2>Заголовок второго уровня<br/>в две строки</h2>
+
+			<p>Whamisa (Хамиса) появилась на&nbsp;нашем рынке не&nbsp;так давно&nbsp;и, как любая другая марка, успела обзавестись как фанатами, так и&nbsp;противниками. Я&nbsp;пока придерживаюсь нейтралитета, т.к.&nbsp;не&nbsp;горю особым желанием ставить новые эксперименты, но&nbsp;купленные средства понравились, хотя не&nbsp;без оговорок (таких, как, например, отсутствие СПФ в&nbsp;бб-креме).</p>
+
+			<h3>Заголовок третьего уровня<br/>в две строки</h3>
+
+			<p>Но&nbsp;идея у&nbsp;марки хорошая: использование продуктов ферментации, отказ от&nbsp;воды в&nbsp;пользу сока алоэ и&nbsp;цветочных вод, сертификация тоже многое значит, т.&nbsp;е. всё, как мы&nbsp;любим, и, как всегда бывает с&nbsp;экзотическими средствами, роль вишенки на&nbsp;торте играют небольшие порции бреда в&nbsp;русскоязычном описании. Совет наносить гидрофилку на&nbsp;предварительно увлажненное лицо даже комментировать не&nbsp;хочу&nbsp;&mdash; сразу видно, переводил человек, далекий от&nbsp;двухступенчатой системы умывания, а&nbsp;ведь даже в&nbsp;журнале про вышивание крестиком и&nbsp;огуречную рассаду про это писали (буквально на&nbsp;днях видела номер в&nbsp;газетном киоске, но&nbsp;название издания не&nbsp;запомнила), ну&nbsp;е-мое, неужели так сложно перевести английский (!!!) текст <a href="http://www.whamisa.us/#!cleansing-oil-manual/cjh9">на&nbsp;официальном сайте?</a></p>
+
+			<h2>Заголовок второго уровня<br/>в две строки</h2>
+			<h3>Заголовок третьего уровня<br/>в две строки</h3>
+			<h4>Заголовок четвёртого уровня<br/>в две строки</h4>
+			<p>Очищает лицо, удаляет макияж, включая основу, отлично подходит для гиппоаллергенной (а? это как? ) и&nbsp;чувствительной кожи. Увлажняет кожу, делает ее&nbsp;эластичной на&nbsp;длительное время. Стягивает поры и&nbsp;очищает молодую кожу (немолодую тоже&nbsp;&mdash; моё примечание). Экстракты одуванчика и&nbsp;каменного дерева очищают кожу, придавая ей&nbsp;полностью здоровый вид.</p>
+			<p>Состав: Olea Europaea (Olive) Fruit Oil, Caprylic/Capric Triglyceride, Persea Gratissima (Avocado) Oil, Kyounin Yu, Scutellaria Baicalensis Root Extract, Paeonia Suffruticosa Root Extract, Glycyrrhiza Inflata Root Extract, Oenothera Biennis (Evening Primrose) Oil, Chrysanthemum Sinense Flower Extract, Nelumbium Speciosum Flower Extract, Taraxacum Officinale (Dandelion) Rhizome/Root Extract, Tocopheryl Acetate, Aniba Rosaeodora (Rosewood) Wood Oil, Citrus Aurantium Bergamia (Bergamot) Fruit Oil, Geranium Maculatum Oil.</p>
+
+			<div class="blockquote"><blockquote class="blockquote__text">
+        Я&nbsp;уверен: товарное и&nbsp;ценовое предложение должно быть персонализировано.
+        <br>
+        В&nbsp;этом залог успеха.
+      </blockquote><p class="blockquote__author">
+        Яков Хромов, директор по&nbsp;маркетингу сети «Посуда Центр»
+      </p></div>
+
+
+		</div>
+	</main>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+	
+				<!-- Логотип и копирайт -->
+				<div class="logo-copyright">
+					<div class="row no-gutters">
+						<div class="logo">
+							<a class="navbar-brand text-hide" href="#">whamisa</a>
+						</div>
+						<div class="copyright">		
+							<p>© 2018 Whamisa<br/>
+							All rights reserved</p>
+						</div>
+					</div>
+				</div>
+	
+				<!-- Продукция -->
+				<div class="links-list">
+					<h3 class="caps-spaced">Продукция</h3>
+					<div class="row no-gutters">
+						<ul class="col-6">
+							<li><a href="#">Лицо</a></li>
+							<li><a href="#">Тело</a></li>
+							<li><a href="#">Волосы</a></li>
+						</ul>
+						<ul class="col-6">
+							<li><a href="#">Дети</a></li>
+							<li><a href="#">Мужчины</a></li>
+							<li><a href="#">Солнце</a></li>
+						</ul>
+					</div>
+				</div>
+	
+				<!-- Компания -->
+				<div class="links-list">
+					<h3 class="caps-spaced">Компания</h3>
+					<ul>
+						<li><a href="#">Whamisa</a></li>
+						<li><a href="#">Оплата и доставка</a></li>
+						<li><a href="#">Оферта</a></li>
+					</ul>
+				</div>
+	
+				<!-- Контакты -->
+				<div class="links-list contacts">
+					<h3 class="caps-spaced"><a href="/contacts">Контакты</a></h3>
+					<ul>
+						<li>
+							<i class="fal fa-headset mr-2"></i>
+							<a href="tel:74953634321">+7 (495) 363-43-21</a>
+						</li>
+						<li>
+							<i class="fal fa-hourglass-half mr-2 ml-1"></i>
+							пн-вс: 10:00-19:00
+						</li>
+						<li class="mt-3">
+							<a href="#" class="border-0"><i class="fab fa-instagram fa-lg mr-2"></i></a>
+							<a href="https://www.facebook.com/pg/whamisaskincare/about/" class="border-0"><i class="fab fa-facebook-square fa-lg"></i></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/main.js" type="text/javascript"></script>
+</body>
+</html>

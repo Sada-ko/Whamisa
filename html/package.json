@@ -32,7 +32,7 @@
     "imagemin-jpeg-recompress": "^5.1.0",
     "imagemin-pngquant": "^5.0.1",
     "jquery": "^3.3.1",
-    "npm": "^6.3.0",
+    "npm": "^6.4.0",
     "owl.carousel": "^2.3.4",
     "popper.js": "^1.14.3",
     "postcss-momentum-scrolling": "^1.4.8"

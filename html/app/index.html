@@ -25,524 +25,281 @@
 </head>
 
 <body>
-	<header>
+	
+	//= header.html
 
-		<!-- LOGO and SEACRH -->
-		<div class="navbar navbar-light icons-menu container">
+	<!-- Begin page content -->
+	<main role="main">
 
-			<a class="navbar-brand text-hide" href="#">whamisa</a>
-
-			<!-- SEARCH TRIGGER -->
-			<a class="header-icon-link caps-spaced search-trigger collapsed" data-toggle="collapse" href="#collapseSearch">
-				<i class="fal fa-search"></i>
-				<span>Поиск</span>
-			</a>
-
-			<!-- Mobile Hamburger Button -->
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-				<i class="fal fa-bars fa-lg"></i>
-			</button>
-
-			<!-- SEARCH FORM -->
-			<div id="collapseSearch" class="search-form collapse navbar-collapse">
-				<form  class="d-flex">
-					<input class="form-control flex-grow-1 form-control-sm" type="text" placeholder="Например, лосьон" aria-label="Search">
-					<button class="btn btn-sm btn-link caps-spaced" type="submit">Найти</button>
-				</form>
-			</div>
-
-			<!-- ENTER-FAVS-CART -->
-			<!-- <ul class="navbar caps-spaced d-none">
-				<li class="nav-item">
-					<a class="nav-link header-icon-link" href="#">
-						<i class="fal fa-heart" data-fa-transform="grow-1"></i>
-						<i class="fas fa-heart active" data-fa-transform="grow-1"></i>
-						<span>Избранное</span>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link header-icon-link" href="#">
-						<i class="fal fa-shopping-bag" data-fa-transform="grow-2"></i>
-						<i class="fas fa-shopping-bag active" data-fa-transform="grow-2"></i>
-						<span>Корзина</span>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link header-icon-link" href="#">
-						<i class="fal fa-key" data-fa-transform="grow-2"></i>
-						<i class="fas fa-key active" data-fa-transform="grow-2"></i>
-						<span>Войти</span>
-					</a>
-				</li>
-			</ul> -->
-		</div>
-
-		<!-- EXPAND NAV and ICONS -->
-		<nav class="navbar navbar-expand-md navbar-light">
-			<div class="container position-relative">
-
-				<div class="collapse navbar-collapse" id="navbarCollapse">
-
-					<!-- ENTER-FAVS-CART -->
-					<div class="icons-menu">
-						<ul class="navbar caps-spaced d-flex justify-content-end">
-							<li class="nav-item">
-								<a class="nav-link header-icon-link" href="#">
-									<i class="fal fa-heart" data-fa-transform="grow-1"></i>
-									<i class="fas fa-heart active" data-fa-transform="grow-1"></i>
-									<span>Избранное</span>
-								</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link header-icon-link" href="#">
-									<i class="fal fa-shopping-bag" data-fa-transform="grow-2"></i>
-									<i class="fas fa-shopping-bag active" data-fa-transform="grow-2"></i>
-									<span>Корзина</span>
-								</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link header-icon-link" href="#">
-									<i class="fal fa-key" data-fa-transform="grow-2"></i>
-									<i class="fas fa-key active" data-fa-transform="grow-2"></i>
-									<span>Войти</span>
-								</a>
-							</li>
-						</ul>
-					</div>
-
-					<!-- MAIN MENU -->
-					<!-- <div class="main-menu caps-spaced">
-						<ul class="nav justify-content-md-center">
-							<li class="nav-item">
-								<a class="nav-link inside" href="#">
-									<i class="fas fa-seedling crimson"></i>
-									Whamisa
-								</a>
-							</li>
-
-							<li class="nav-item dropdown">
-								<a class="nav-link" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Лицо</a>
-								<div class="dropdown-menu">
-									<a class="dropdown-item" href="#">Action</a>
-									<a class="dropdown-item" href="#">Another action</a>
-									<a class="dropdown-item" href="#">Something else here</a>
-									<div class="dropdown-divider"></div>
-									<a class="dropdown-item" href="#">Separated link</a>
-								</div>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link active" href="#">Тело</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Волосы</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Дети</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Мужчины</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Солнце</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">
-									Акции
-									<span class="fa-stack fa-xs position-absolute ml-1">
-										<i class="fas fa-certificate fa-stack-2x crimson"></i>
-										<i class="fas fa-percentage fa-stack-1x fa-inverse"></i>
-									</span>
-								</a>
-							</li>
-						</ul>
-					</div> -->
-				</div>
-			</div>
-		</nav>
-
-		<!-- MAIN SCROLLING MENU -->
-		<div class="main-menu scrolling menuWrapper">
-			<div class="menuLimiter container dragscroll">
-				<menu class="caps-spaced">
-					<li class="nav-item">
-						<a class="nav-link inside" href="#">
-							<i class="fas fa-seedling crimson"></i>
-							Whamisa
-						</a>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Лицо</a>
-						<div class="dropdown-menu">
-							<a class="dropdown-item" href="#">Ежедневный уход</a>
-							<a class="dropdown-item" href="#">Еженедельный уход</a>
-						</div>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link active" href="#">Тело</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Волосы</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Дети</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Мужчины</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Солнце</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">
-							Акции
-							<span class="fa-stack fa-xs position-absolute ml-1">
-								<i class="fas fa-certificate fa-stack-2x crimson"></i>
-								<i class="fas fa-percentage fa-stack-1x fa-inverse"></i>
-							</span>
-						</a>
-					</li>
-				</menu>
-			</div>
-		</div>
-	</header>
-
-		<!-- Begin page content -->
-		<main role="main">
-
-			<!-- CAROUSEL -->
-			<section>
-				<div class="container">
-					<div class="carousel carousel-slim main-carousel owl-carousel owl-theme">
-						<div class="item">
-							<img class="first-slide" src="../img/carousel-slide-1.jpg" alt="First slide">
-						</div>
-
-						<div class="item">
-							<img class="first-slide" src="../img/carousel-slide-3.jpg" alt="First slide">
-						</div>
-
-						<div class="item">
-							<img class="first-slide" src="../img/carousel-slide-2.jpg" alt="First slide">
-						</div>		
-					</div>
-				</div>
-			</section>
-
-			<!-- WEEK OFFER -->
-			<section>
-				<div class="week-offer container adv-block">
-
-					<h2 class="gradient-text animated caps-spaced adv-block-head"​>Предложение недели</h2>
-
-					<!-- ROW -->
-					<div class="adv-block-body">
-
-						<a href="#" class="adv-block-content">
-
-							<div class="row m-0">
-
-								<!-- COL -->
-								<div class="pic">
-									<div class="zoom-background">
-										<div class="zoom-pic">
-											<img class="fill-box" src="img/EN_FOCR.jpg">
-										</div>
-									</div>
-								</div>
-
-								<!-- COL -->
-								<div class="info">
-									<div class="adv-block-name">
-										<h3>Body Desserts Крем увлажняющий, Ваниль, Organic Shop 250&nbsp;мл</h3>
-										<div class="text-muted">
-											Body Desserts Foam Cleansing Cream, gettin wet, Organic shop, 250&nbsp;ml
-										</div>
-									</div>
-									<div class="adv-block-info">
-										<p>Natural fermented organic flowers and organic aloe masculata leaf extract water (instead of&nbsp;using filtered water) give mild and soft cleansing. It&nbsp;makes the skin softer and tighter.</p>
-									</div>
-									<div class="price">
-										<span class="new-price">2800&nbsp;₽</span> 
-										<span class="old-price text-muted">3400&nbsp;₽</span>
-									</div>
-								</div>
-							</div>
-						</a>
-					</div>
-				</div>
-			</section>
-
-			<!-- FERMENTATION OWL -->
-			<section>
-				<div class="container-fluid p-0">
-					<div class="articles-tease owl-carousel owl-theme">
-						<div class="item">
-							<div class="ferment no-gutters">
-								<div class="pic">
-									<img class="fill-box" src="img/ferment-pic.jpg">
-								</div>
-								<div class="carousel-caption">
-									<div class="inner">
-										<img class="fill-box" src="../img/rose-pattern-bg.jpg" alt="">
-										<div class="text container">
-											<h2 class="gradient-text">Естественная ферментация</h2>
-											<p>Метод натуральной ферментации, используемый при производстве продукции Whamisa, позволяет сохранить и&nbsp;усилить свойства растительных компонентов каждого средства.</p>
-											<span class="d-none d-lg-inline"><p>Именно благодаря методу натуральной ферментации все средства нашей линейки обладают повышенной эффективностью и&nbsp;способны легко проникать в&nbsp;кожу, обеспечивая активное увлажнение, питание и&nbsp;уход.</p></span>
-
-											<a href="#" class="d-inline-block inside h3 mt-2">
-												<i class="fal fa-seedling crimson"></i>
-												<span>Как это происходит</span>
-											</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="item">
-							<div class="row no-gutters">
-								<div class="pic">
-									<img class="fill-box" src="img/booklets-pic.jpg">
-								</div>
-								<div class="carousel-caption">
-									<div class="gradient inner">
-										<div class="text container">
-											<h2>123</h2>
-											<p>Test text</p>
-										</div>
-									</div>
-								</div>							
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<!-- NEWS -->
-			<section>
-				<div class="new-items container adv-block">
-
-					<h2 class="gradient-text animated caps-spaced adv-block-head"​>Новинки</h2>
-
-					<!-- OWL-CAROUSEL -->
-					<div class="carousel owl-carousel owl-theme">
-						<div class="item">
-							<a class="owl-base-link" href="#">
-								<div class="pic">
-									<div class="zoom-background">
-										<div class="zoom-pic">
-											<img class="fill-box" src="img/EN_FOCR.jpg">
-										</div>
-									</div>
-								</div>
-								<h4>Body Desserts Крем увлажняющий, Ваниль, Organic Shop 250&nbsp;мл</h4>
-								<div class="small text-muted">
-									Body Desserts Foam Cleansing Cream, gettin wet, Organic shop, 250&nbsp;ml
-								</div>
-								<div class="price">
-									<span class="new-price">2800&nbsp;₽</span> 
-								</div>
-							</a>
-						</div>
-						<div class="item">
-							<a class="owl-base-link" href="#">
-								<div class="pic">
-									<div class="zoom-background">
-										<div class="zoom-pic">
-											<img class="fill-box" src="img/owl-item-1.jpg">
-										</div>
-									</div>
-								</div>
-								<h4>Тонер на основе цветочных ферментов</h4>
-								<div class="small text-muted">
-									Flower toner
-								</div>
-								<div class="price">
-									<span class="new-price">3300&nbsp;₽</span> 
-								</div>
-							</a>
-						</div>
-						<div class="item">
-							<a class="owl-base-link" href="#">
-								<div class="pic">
-									<div class="zoom-background">
-										<div class="zoom-pic">
-											<img class="fill-box" src="img/owl-item-2.jpg">
-										</div>
-									</div>
-								</div>
-								<h4>Эмульсия для ухода за жирной кожей на основе цветочных и яблочных ферментов</h4>
-								<div class="small text-muted">
-									Emulsiya dlya fat skin for fat girlz
-								</div>
-								<div class="price">
-									<span class="new-price">2100&nbsp;₽</span> 
-								</div>
-							</a>
-						</div>
-						<div class="item">
-							<a class="owl-base-link" href="#">
-								<div class="pic">
-									<div class="zoom-background">
-										<div class="zoom-pic">
-											<img class="fill-box" src="img/owl-item-3.jpg">
-										</div>
-									</div>
-								</div>
-								<h4>Детский шампунь на основе ферментов моркови</h4>
-								<div class="small text-muted">
-									Some kids carrot shampoo
-								</div>
-								<div class="price">
-									<span class="new-price">1800&nbsp;₽</span> 
-								</div>
-							</a>
-						</div>
-						<div class="item">
-							<a class="owl-base-link" href="#">
-								<div class="pic">
-									<div class="zoom-background">
-										<div class="zoom-pic">
-											<img class="fill-box" src="img/EN_FOCR.jpg">
-										</div>
-									</div>
-								</div>
-								<h4>Body Desserts Крем увлажняющий, Ваниль, Organic Shop 250&nbsp;мл</h4>
-								<div class="small text-muted">
-									Body Desserts Foam Cleansing Cream, gettin wet, Organic shop, 250&nbsp;ml
-								</div>
-								<div class="price">
-									<span class="new-price">2800&nbsp;₽</span> 
-								</div>
-							</a>
-						</div>
-						<div class="item">
-							<a class="owl-base-link" href="#">
-								<div class="pic">
-									<div class="zoom-background">
-										<div class="zoom-pic">
-											<img class="fill-box" src="img/owl-item-1.jpg">
-										</div>
-									</div>
-								</div>
-								<h4>Тонер на основе цветочных ферментов</h4>
-								<div class="small text-muted">
-									Flower toner
-								</div>
-								<div class="price">
-									<span class="new-price">3300&nbsp;₽</span> 
-								</div>
-							</a>
-						</div>
-						<div class="item">
-							<a class="owl-base-link" href="#">
-								<div class="pic">
-									<div class="zoom-background">
-										<div class="zoom-pic">
-											<img class="fill-box" src="img/owl-item-2.jpg">
-										</div>
-									</div>
-								</div>
-								<h4>Эмульсия для ухода за жирной кожей на основе цветочных и яблочных ферментов</h4>
-								<div class="small text-muted">
-									Emulsiya dlya fat skin for fat girlz
-								</div>
-								<div class="price">
-									<span class="new-price">2100&nbsp;₽</span> 
-								</div>
-							</a>
-						</div>
-						<div class="item">
-							<a class="owl-base-link" href="#">
-								<div class="pic">
-									<div class="zoom-background">
-										<div class="zoom-pic">
-											<img class="fill-box" src="img/owl-item-3.jpg">
-										</div>
-									</div>
-								</div>
-								<h4>Детский шампунь на основе ферментов моркови</h4>
-								<div class="small text-muted">
-									Some kids carrot shampoo
-								</div>
-								<div class="price">
-									<span class="new-price">1800&nbsp;₽</span> 
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
-			</section>
-
-		</main>
-
-		<footer class="footer">
+		<!-- CAROUSEL -->
+		<section>
 			<div class="container">
-				<div class="row">
+				<div class="carousel carousel-slim main-carousel owl-carousel owl-theme">
+					<div class="item">
+						<img class="first-slide" src="../img/carousel-slide-1.jpg" alt="First slide">
+					</div>
 
-					<!-- Логотип и копирайт -->
-					<div class="logo-copyright">
-						<div class="row no-gutters">
-							<div class="logo">
-								<a class="navbar-brand text-hide" href="#">whamisa</a>
+					<div class="item">
+						<img class="first-slide" src="../img/carousel-slide-3.jpg" alt="First slide">
+					</div>
+
+					<div class="item">
+						<img class="first-slide" src="../img/carousel-slide-2.jpg" alt="First slide">
+					</div>		
+				</div>
+			</div>
+		</section>
+
+		<!-- WEEK OFFER -->
+		<section>
+			<div class="week-offer container adv-block">
+
+				<h2 class="gradient-text animated caps-spaced adv-block-head"​>Предложение недели</h2>
+
+				<!-- ROW -->
+				<div class="adv-block-body">
+
+					<a href="#" class="adv-block-content">
+
+						<div class="row m-0">
+
+							<!-- COL -->
+							<div class="pic">
+								<div class="zoom-background">
+									<div class="zoom-pic">
+										<img class="fill-box" src="img/EN_FOCR.jpg">
+									</div>
+								</div>
 							</div>
-							<div class="copyright">		
-								<p>© 2018 Whamisa<br/>
-								All rights reserved</p>
+
+							<!-- COL -->
+							<div class="info">
+								<div class="adv-block-name">
+									<h3>Body Desserts Крем увлажняющий, Ваниль, Organic Shop 250&nbsp;мл</h3>
+									<div class="text-muted">
+										Body Desserts Foam Cleansing Cream, gettin wet, Organic shop, 250&nbsp;ml
+									</div>
+								</div>
+								<div class="adv-block-info">
+									<p>Natural fermented organic flowers and organic aloe masculata leaf extract water (instead of&nbsp;using filtered water) give mild and soft cleansing. It&nbsp;makes the skin softer and tighter.</p>
+								</div>
+								<div class="price">
+									<span class="new-price">2800&nbsp;₽</span> 
+									<span class="old-price text-muted">3400&nbsp;₽</span>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- FERMENTATION OWL -->
+		<section>
+			<div class="container-fluid p-0">
+				<div class="articles-tease owl-carousel owl-theme">
+					<div class="item">
+						<div class="ferment no-gutters">
+							<div class="pic">
+								<img class="fill-box" src="img/ferment-pic.jpg">
+							</div>
+							<div class="carousel-caption">
+								<div class="inner">
+									<img class="fill-box" src="../img/rose-pattern-bg.jpg" alt="">
+									<div class="text container">
+										<h2 class="gradient-text">Естественная ферментация</h2>
+										<p>Метод натуральной ферментации, используемый при производстве продукции Whamisa, позволяет сохранить и&nbsp;усилить свойства растительных компонентов каждого средства.</p>
+										<span class="d-none d-lg-inline"><p>Именно благодаря методу натуральной ферментации все средства нашей линейки обладают повышенной эффективностью и&nbsp;способны легко проникать в&nbsp;кожу, обеспечивая активное увлажнение, питание и&nbsp;уход.</p></span>
+
+										<a href="base.html" class="d-inline-block inside h3 mt-2">
+											<i class="fal fa-seedling crimson"></i>
+											<span>Как это происходит</span>
+										</a>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 
-					<!-- Продукция -->
-					<div class="links-list">
-						<h3 class="caps-spaced">Продукция</h3>
+					<div class="item">
 						<div class="row no-gutters">
-							<ul class="col-6">
-								<li><a href="#">Лицо</a></li>
-								<li><a href="#">Тело</a></li>
-								<li><a href="#">Волосы</a></li>
-							</ul>
-							<ul class="col-6">
-								<li><a href="#">Дети</a></li>
-								<li><a href="#">Мужчины</a></li>
-								<li><a href="#">Солнце</a></li>
-							</ul>
+							<div class="pic">
+								<img class="fill-box" src="img/booklets-pic.jpg">
+							</div>
+							<div class="carousel-caption">
+								<div class="gradient inner">
+									<div class="text container">
+										<h2>123</h2>
+										<p>Test text</p>
+									</div>
+								</div>
+							</div>							
 						</div>
-					</div>
-
-					<!-- Компания -->
-					<div class="links-list">
-						<h3 class="caps-spaced">Компания</h3>
-						<ul>
-							<li><a href="#">Whamisa</a></li>
-							<li><a href="#">Оплата и доставка</a></li>
-							<li><a href="#">Оферта</a></li>
-						</ul>
-					</div>
-
-					<!-- Контакты -->
-					<div class="links-list contacts">
-						<h3 class="caps-spaced"><a href="/contacts">Контакты</a></h3>
-						<ul>
-							<li>
-								<i class="fal fa-headset mr-2"></i>
-								<a href="tel:74953634321">+7 (495) 363-43-21</a>
-							</li>
-							<li>
-								<i class="fal fa-hourglass-half mr-2 ml-1"></i>
-								пн-вс: 10:00-19:00
-							</li>
-							<li class="mt-3">
-								<a href="#" class="border-0"><i class="fab fa-instagram fa-lg mr-2"></i></a>
-								<a href="#" class="border-0"><i class="fab fa-facebook-square fa-lg"></i></a>
-							</li>
-						</ul>
 					</div>
 				</div>
 			</div>
-		</footer>
+		</section>
 
-		<script src="js/main.js" type="text/javascript"></script>
+		<!-- NEWS -->
+		<section>
+			<div class="new-items container adv-block">
 
-	</body>
-	</html>
+				<h2 class="gradient-text animated caps-spaced adv-block-head"​>Новинки</h2>
+
+				<!-- OWL-CAROUSEL -->
+				<div class="carousel owl-carousel owl-theme">
+					<div class="item">
+						<a class="owl-base-link" href="#">
+							<div class="pic">
+								<div class="zoom-background">
+									<div class="zoom-pic">
+										<img class="fill-box" src="img/EN_FOCR.jpg">
+									</div>
+								</div>
+							</div>
+							<h4>Body Desserts Крем увлажняющий, Ваниль, Organic Shop 250&nbsp;мл</h4>
+							<div class="small text-muted">
+								Body Desserts Foam Cleansing Cream, gettin wet, Organic shop, 250&nbsp;ml
+							</div>
+							<div class="price">
+								<span class="new-price">2800&nbsp;₽</span> 
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a class="owl-base-link" href="#">
+							<div class="pic">
+								<div class="zoom-background">
+									<div class="zoom-pic">
+										<img class="fill-box" src="img/owl-item-1.jpg">
+									</div>
+								</div>
+							</div>
+							<h4>Тонер на основе цветочных ферментов</h4>
+							<div class="small text-muted">
+								Flower toner
+							</div>
+							<div class="price">
+								<span class="new-price">3300&nbsp;₽</span> 
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a class="owl-base-link" href="#">
+							<div class="pic">
+								<div class="zoom-background">
+									<div class="zoom-pic">
+										<img class="fill-box" src="img/owl-item-2.jpg">
+									</div>
+								</div>
+							</div>
+							<h4>Эмульсия для ухода за жирной кожей на основе цветочных и яблочных ферментов</h4>
+							<div class="small text-muted">
+								Emulsiya dlya fat skin for fat girlz
+							</div>
+							<div class="price">
+								<span class="new-price">2100&nbsp;₽</span> 
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a class="owl-base-link" href="#">
+							<div class="pic">
+								<div class="zoom-background">
+									<div class="zoom-pic">
+										<img class="fill-box" src="img/owl-item-3.jpg">
+									</div>
+								</div>
+							</div>
+							<h4>Детский шампунь на основе ферментов моркови</h4>
+							<div class="small text-muted">
+								Some kids carrot shampoo
+							</div>
+							<div class="price">
+								<span class="new-price">1800&nbsp;₽</span> 
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a class="owl-base-link" href="#">
+							<div class="pic">
+								<div class="zoom-background">
+									<div class="zoom-pic">
+										<img class="fill-box" src="img/EN_FOCR.jpg">
+									</div>
+								</div>
+							</div>
+							<h4>Body Desserts Крем увлажняющий, Ваниль, Organic Shop 250&nbsp;мл</h4>
+							<div class="small text-muted">
+								Body Desserts Foam Cleansing Cream, gettin wet, Organic shop, 250&nbsp;ml
+							</div>
+							<div class="price">
+								<span class="new-price">2800&nbsp;₽</span> 
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a class="owl-base-link" href="#">
+							<div class="pic">
+								<div class="zoom-background">
+									<div class="zoom-pic">
+										<img class="fill-box" src="img/owl-item-1.jpg">
+									</div>
+								</div>
+							</div>
+							<h4>Тонер на основе цветочных ферментов</h4>
+							<div class="small text-muted">
+								Flower toner
+							</div>
+							<div class="price">
+								<span class="new-price">3300&nbsp;₽</span> 
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a class="owl-base-link" href="#">
+							<div class="pic">
+								<div class="zoom-background">
+									<div class="zoom-pic">
+										<img class="fill-box" src="img/owl-item-2.jpg">
+									</div>
+								</div>
+							</div>
+							<h4>Эмульсия для ухода за жирной кожей на основе цветочных и яблочных ферментов</h4>
+							<div class="small text-muted">
+								Emulsiya dlya fat skin for fat girlz
+							</div>
+							<div class="price">
+								<span class="new-price">2100&nbsp;₽</span> 
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a class="owl-base-link" href="#">
+							<div class="pic">
+								<div class="zoom-background">
+									<div class="zoom-pic">
+										<img class="fill-box" src="img/owl-item-3.jpg">
+									</div>
+								</div>
+							</div>
+							<h4>Детский шампунь на основе ферментов моркови</h4>
+							<div class="small text-muted">
+								Some kids carrot shampoo
+							</div>
+							<div class="price">
+								<span class="new-price">1800&nbsp;₽</span> 
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+		//= footer.html
+
+	<script src="js/main.js" type="text/javascript"></script>
+
+</body>
+</html>
