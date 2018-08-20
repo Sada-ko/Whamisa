@@ -26,6 +26,10 @@
     border-bottom-color: transparentize($link-active-color, .4);
   }
 
+  &:focus{
+     color: $link-color;
+  }
+
   &.disabled, .disabled & {
     border: none;
     cursor: default;
@@ -34,7 +38,7 @@
     }
   }
 
-  &.active, .active > & {
+  &.active, .active > &, .show > a {
   // &.active, .active > &, .show > & {
     cursor: default;
     font-weight: bold;

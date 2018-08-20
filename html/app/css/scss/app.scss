@@ -8,18 +8,17 @@ html {
 
 body {
 	font-family: 'Montserrat', sans-serif;
-	font-weight: 400;
 
 	@include media-breakpoint-up(lg) {
-		margin-bottom: 280px;
+		margin-bottom: calc(280px + 4rem);
 	}
 
 	@include media-breakpoint-down(lg) {
-		margin-bottom: 350px;
+		margin-bottom: calc(350px + 4rem);
 	}
 
 	@include media-breakpoint-down(sm) {
-		margin-bottom: 500px;
+		margin-bottom: calc(500px + 4rem);
 	}
 }
 
@@ -63,7 +62,7 @@ header {
 		}
 
 		.nav-link {
-			color: black;
+			color: $base-text-color;
 
 			&:hover {
 				color: $red;
@@ -84,8 +83,6 @@ header {
 
 		}
 	}
-
-
 
 	.header-icon-link {
 		padding: 0 !important;
@@ -126,6 +123,12 @@ header {
 	}
 
 	.navbar-toggler {
+		border: none;
+		padding-right: 0;
+		padding-top: 0;
+		margin-top: -10px;
+		// color: $base-text-color !important;
+
 		@include media-breakpoint-up(md) {
 			display: none;
 		}
@@ -143,10 +146,6 @@ header {
 		@include media-breakpoint-down(sm) {
 			margin-right: 1rem;
 			margin-top: 2px;
-		}
-
-		&:focus {
-			color: black;
 		}
 
 		span {
@@ -167,7 +166,7 @@ header {
 
 		@include media-breakpoint-up(md) {
 			padding-top: 0;
-			top: 15px;
+			top: 5px;
 			position: absolute;
 			left: 60px;
 		}
@@ -199,12 +198,10 @@ header {
 
 	&.scrolling{
 
-		@include media-breakpoint-up(md) {
-			display: none;
-		}
-
-		li{
-			margin-left: 0;
+		@include media-breakpoint-down(md){	
+			li{
+				margin-left: 0;
+			}
 		}
 
 		.nav-item:last-child {
@@ -219,6 +216,14 @@ header {
 			padding: 0;
 			display: flex;
 			list-style: none;
+
+			@include media-breakpoint-down(md) {
+				margin-top: 0;
+			}
+
+			@include media-breakpoint-up(lg) {
+				justify-content: center !important;
+			}
 		}
 
 		@media only screen and (max-width: 400px) {
@@ -250,9 +255,9 @@ header {
 .menuLimiter {
 	width: 100%;
 
-  /* Зададим возможность горизонтальной прокрутки */
-  overflow-x: scroll;
-  overflow-y: hidden;
+	/* Зададим возможность горизонтальной прокрутки */
+	overflow-x: scroll;
+	overflow-y: hidden;
 
   /* Добавим дополнительный нижнее поле
   элементу, в котором прокручивается меню */
@@ -270,28 +275,27 @@ header {
   	rgba(0, 0, 0, .25) calc(100% - 9px),
   	transparent
   	);
-
-  &.dragscroll {
-  	cursor: grab;
-  }
 }
 
 .menuWrapper {
-  /* Спрячем всё, что выходит за границы родителя */
-  overflow: hidden;
-  padding-right: 15px;
+	/* Спрячем всё, что выходит за границы родителя */
+	overflow: hidden;
+
+	@include media-breakpoint-down(md){
+		padding-right: 15px;
+	}
 }
 
 // DROPDOWN
 .dropdown-menu {
 	padding: 1rem;
 	font-size: 80%;
-	left: -20px;
-	z-index: 1000;
+	left: -1rem !important;
 
 	a{
 		@include link-style($link-color, $link-hover-color);
 		margin-bottom: .25rem;
+		color: $base-text-color;
 
 		&:hover{
 			background: none;
@@ -299,12 +303,35 @@ header {
 	}
 }
 
+/* Хак, чтобы были видны дропдауны */
+.menuWrapper {
+	position: absolute;
+	z-index: 2;
+}
+
+.menuLimiter{
+	padding-bottom: 140px;
+}
+
+header{
+	margin-bottom: 5rem;
+
+	@include media-breakpoint-down(md){
+		margin-bottom: 4rem;	
+	}
+}
+
+// Base styles
 a, .btn-link {
 	@include link-style($link-color, $link-hover-color);
 
 	&.inside {
 		@include inside-link-style($link-color, $link-hover-color);
 	}
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	line-height: 1.3;
 }
 
 .btn {
@@ -328,11 +355,12 @@ a, .btn-link {
 
 	.adv-block-body{
 		h3{
-			font-size: 1.25rem
+			font-size: 1.25rem;
 		}
 	}
 	h4{
-		font-size: 1rem
+		font-size: 1rem;
+		line-height: 1.3;
 	}
 
 	.pic{
@@ -340,18 +368,22 @@ a, .btn-link {
 	}
 }
 
-.gradient {
-	color: transparent;
-	background-size: 200% 200%;
+.gradient{
 	background-image: linear-gradient(90deg,
 		$button-base,
 		$base-gradient-start,
 		$base-gradient-end
 		);
+}
+
+.gradient-text {
+	@extend .gradient;
+	background-size: 200% 200%;
+	color: transparent;
 	-webkit-background-clip: text;
 
 	&.animated{
-		animation: move-background 5s linear infinite;
+		animation: move-background 3s linear infinite;
 	}
 }
 
@@ -401,10 +433,10 @@ a, .btn-link {
 .carousel {
 
 	&.main-carousel{		
-		margin-bottom: 5.5rem;
+		margin-bottom: 4rem;
 
 		@include media-breakpoint-down(md) {
-			margin-bottom: 4rem;
+			margin-bottom: 3rem;
 		}
 		@include media-breakpoint-down(sm) {
 			display: none;
@@ -417,9 +449,15 @@ a, .btn-link {
 		color: $button-base;
 		opacity: 1;
 		border: none;
+		z-index: 2;
+		transition: .2s;
 
 		@include media-breakpoint-down(sm) {
 			display: none;
+		}
+
+		&:hover{
+			opacity: .5;
 		}
 	}
 
@@ -447,10 +485,6 @@ a, .btn-link {
 		}
 	}
 
-	.carousel-header {
-		margin-bottom: 7rem;
-	}
-
 	.container {
 		position: relative;
 	}
@@ -464,6 +498,11 @@ a, .btn-link {
 			border-radius: 10px;
 			border: 1px solid $button-base;
 			background-color: transparent;
+			transition: .2s;
+
+			&:hover{
+				background-color: transparentize($button-base, .5);
+			}
 
 			&.active {
 				background-color: $button-base;
@@ -502,7 +541,7 @@ a, .btn-link {
 		margin: 0;
 
 		.adv-block-info{
-			color: black;
+			color: $base-text-color;
 		}
 	}
 
@@ -566,7 +605,7 @@ a, .btn-link {
 
 .price{
 	font-size: 2.25rem;
-	font-weight: bold;
+	// font-weight: bold;
 
 	.new-price{
 		color: $button-base;
@@ -581,7 +620,7 @@ a, .btn-link {
 
 // ARTICLES TEASE
 .articles-tease{
-	margin-bottom: 4rem;
+	margin-bottom: 5rem;
 
 	@include media-breakpoint-down(sm) {
 		margin-bottom: 3rem;
@@ -620,6 +659,7 @@ a, .btn-link {
 
 	.ferment{
 		@include make-row();
+		margin: 0;
 	}
 
 	.pic{
@@ -633,21 +673,23 @@ a, .btn-link {
 
 	.carousel-caption{
 		@include make-col(8);
-		padding: 0 15px;
+		padding: 0;
+		padding-left: 15px;
 		position: relative;
 		top: 0;
 		z-index: 1;
 		left: 0;
 		right: 0;
-		color: black;
+		color: $base-text-color;
 		text-align: left;
 
 		@include media-breakpoint-down(sm) {
 			@include make-col(12);
+			padding-left: 0;
 		}
 
 		.inner{
-			background-size: 200% !important;
+			// background-size: 200% !important;
 			background-position: right !important;
 			height: 100%;
 
@@ -687,12 +729,80 @@ a, .btn-link {
 		.price, .new-price{
 			padding-top: 1rem;
 			font-size: 1.23rem;
-			color: black;
+			color: $base-text-color;
 			font-weight: 400;
+		}
+	}
+
+	.owl-nav{
+		@include media-breakpoint-down(sm) {
+			display: none;
+		}
+
+		button{
+			color: $button-base !important;
+			position: absolute;
+			display: flex;
+			top: 0;
+			bottom: 0;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			height: 80%;
+			transition: .2s;
+			z-index: 10;
+
+			&:hover{
+				background-color: transparent !important;
+				opacity: .5;
+			}
+		}
+
+		.owl-prev{
+			left: -40px;
+		}
+		.owl-next{
+			right: -40px;
+		}
+	}
+
+	.owl-dots{
+		padding-top: 1rem;
+
+		.owl-dot{
+			span{	
+				width: 10px;
+				height: 10px;
+				border-radius: 10px;
+				border: 1px solid $button-base;
+				background-color: transparent;
+				transition: .2s;
+				margin: 3px;
+			}
+
+			&:hover span{
+				background-color: transparentize($button-base, .5);
+			}
+
+			&.active {
+				span{
+					background-color: $button-base;
+				}
+			}
 		}
 	}
 }
 
+// NEW-ITEMS
+.new-items{
+	margin-bottom: 2rem;
+
+	.owl-nav{
+		button{
+			height: 50%;
+		}
+	}
+}
 
 // FORMS
 form {
@@ -712,12 +822,13 @@ form {
 
 .footer {
 	background-image: url('../img/rose-pattern-bg.jpg');
-	background-size: cover;
 	position: absolute;
 	bottom: 0;
 	width: 100%;
+	background-size: auto 100%;
 
 	@include media-breakpoint-up(lg) {
+		background-size: cover;
 		padding-top: 40px;
 		height: 280px;
 	}

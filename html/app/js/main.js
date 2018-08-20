@@ -7,14 +7,13 @@
 
 // Импортируем необходимые js-файлы Bootstrap 4
 //= ../../node_modules/bootstrap/js/dist/util.js
-//= ../../node_modules/bootstrap/js/dist/carousel.js
 //= ../../node_modules/bootstrap/js/dist/dropdown.js
 //= ../../node_modules/bootstrap/js/dist/button.js
 //= ../../node_modules/bootstrap/js/dist/modal.js
 //= ../../node_modules/bootstrap/js/dist/collapse.js
 
 // OWL.CAROUSEL
-//= ../../node_modules/owl.carousel/dist/owl.carousel.js
+//= ../../node_modules/owl.carousel/dist/owl.carousel.min.js
 
 // FONT AWESOME
 //= fontawesome.min.js
