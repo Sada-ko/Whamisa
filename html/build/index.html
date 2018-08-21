@@ -25,6 +25,38 @@
 </head>
 
 <body>
+
+	<!-- TOP ALERT -->
+	<!-- Надо добавить класс show для того, чтобы он вылез -->
+	<div class="alert alert-top alert-dismissible fade color-invert" role="alert">
+
+		<!-- Форма для подписки на рассылку -->
+		<div class="container subscribe-form d-flex justify-content-between">
+			<div class="pt-2">
+				<i class="fas fa-bell fa-lg mr-1" data-fa-transform="shrink-2"></i>
+				Подпишитесь, чтобы получить скидку&nbsp;15% на&nbsp;первый заказ
+				<i class="fas fa-bell fa-lg ml-1" data-fa-transform="shrink-2"></i>
+			</div>
+
+			<form class="form-inline mt-2 mt-md-0">
+				<input class="form-control form-control-sm mr-sm-2 d-none d-md-block" type="email" placeholder="Электронная почта" aria-label="email" type="text">
+				<input class="form-control form-control-sm mr-sm-2 d-block d-md-none" type="email" placeholder="Эл. почта" aria-label="email" type="text">
+				<button class="btn btn-sm btn-danger my-2 my-sm-0" type="submit">Подписаться</button>
+			</form>
+			
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+
+		<!-- Если подписался, выводим ЭТО (убираем класс d-none) -->
+		<div class="container subscribe-ok d-none">
+			<div class="py-2 text-center">
+				<i class="fas fa-badge-check fa-lg mr-1" data-fa-transform="shrink-2"></i>
+				Всё супер, вы&nbsp;подписались!
+			</div>
+		</div>
+	</div>
 	
 	<header>
 	
@@ -172,7 +204,7 @@
 							</a>
 						</li>
 						<li class="nav-item dropdown">
-							<a class="nav-link" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Лицо</a>
+							<a class="nav-link" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Лицо <i class="fal fa-angle-down"></i></a>
 							<div class="dropdown-menu">
 								<a class="dropdown-item" href="#">Ежедневный уход</a>
 								<a class="dropdown-item" href="#">Еженедельный уход</a>
@@ -193,7 +225,7 @@
 						<li class="nav-item">
 							<a class="nav-link" href="#">Солнце</a>
 						</li>
-						<li class="nav-item">
+						<li class="nav-item actions">
 							<a class="nav-link" href="#">
 								Акции
 								<span class="fa-stack fa-xs position-absolute ml-1">
@@ -290,7 +322,7 @@
 										<p>Метод натуральной ферментации, используемый при производстве продукции Whamisa, позволяет сохранить и&nbsp;усилить свойства растительных компонентов каждого средства.</p>
 										<span class="d-none d-lg-inline"><p>Именно благодаря методу натуральной ферментации все средства нашей линейки обладают повышенной эффективностью и&nbsp;способны легко проникать в&nbsp;кожу, обеспечивая активное увлажнение, питание и&nbsp;уход.</p></span>
 
-										<a href="base.html" class="d-inline-block inside h3 mt-2">
+										<a href="#" class="d-inline-block inside h3 mt-2">
 											<i class="fal fa-seedling crimson"></i>
 											<span>Как это происходит</span>
 										</a>
@@ -326,9 +358,9 @@
 				<h2 class="gradient-text animated caps-spaced adv-block-head"​>Новинки</h2>
 
 				<!-- OWL-CAROUSEL -->
-				<div class="carousel owl-carousel owl-theme">
+				<div class="carousel owl-carousel owl-theme catalogue">
 					<div class="item">
-						<a class="owl-base-link" href="#">
+						<a class="catalogue-base-link" href="#">
 							<div class="pic">
 								<div class="zoom-background">
 									<div class="zoom-pic">
@@ -346,7 +378,7 @@
 						</a>
 					</div>
 					<div class="item">
-						<a class="owl-base-link" href="#">
+						<a class="catalogue-base-link" href="#">
 							<div class="pic">
 								<div class="zoom-background">
 									<div class="zoom-pic">
@@ -364,7 +396,7 @@
 						</a>
 					</div>
 					<div class="item">
-						<a class="owl-base-link" href="#">
+						<a class="catalogue-base-link" href="#">
 							<div class="pic">
 								<div class="zoom-background">
 									<div class="zoom-pic">
@@ -382,7 +414,7 @@
 						</a>
 					</div>
 					<div class="item">
-						<a class="owl-base-link" href="#">
+						<a class="catalogue-base-link" href="#">
 							<div class="pic">
 								<div class="zoom-background">
 									<div class="zoom-pic">
@@ -400,7 +432,7 @@
 						</a>
 					</div>
 					<div class="item">
-						<a class="owl-base-link" href="#">
+						<a class="catalogue-base-link" href="#">
 							<div class="pic">
 								<div class="zoom-background">
 									<div class="zoom-pic">
@@ -418,7 +450,7 @@
 						</a>
 					</div>
 					<div class="item">
-						<a class="owl-base-link" href="#">
+						<a class="catalogue-base-link" href="#">
 							<div class="pic">
 								<div class="zoom-background">
 									<div class="zoom-pic">
@@ -436,7 +468,7 @@
 						</a>
 					</div>
 					<div class="item">
-						<a class="owl-base-link" href="#">
+						<a class="catalogue-base-link" href="#">
 							<div class="pic">
 								<div class="zoom-background">
 									<div class="zoom-pic">
@@ -454,7 +486,7 @@
 						</a>
 					</div>
 					<div class="item">
-						<a class="owl-base-link" href="#">
+						<a class="catalogue-base-link" href="#">
 							<div class="pic">
 								<div class="zoom-background">
 									<div class="zoom-pic">
@@ -474,6 +506,7 @@
 				</div>
 			</div>
 		</section>
+
 	</main>
 
 		<footer class="footer">

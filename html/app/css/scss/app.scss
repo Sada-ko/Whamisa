@@ -8,6 +8,7 @@ html {
 
 body {
 	font-family: 'Montserrat', sans-serif;
+	line-height: 1.35;
 
 	@include media-breakpoint-up(lg) {
 		margin-bottom: calc(280px + 4rem);
@@ -173,6 +174,45 @@ header {
 	}
 }
 
+// ALERT
+.alert-top{
+	background-color: $base-crimson;
+	padding: .5rem 1.25rem;
+	transition: .2s;
+	margin-top: -50px;
+
+	&.show{
+		margin-top: 0;
+	}
+
+	.subscribe-form{
+		// display: none !important;
+	}
+
+	&.alert{
+		padding-right: 0;
+		padding-left: 0;
+		border: none;
+		border-radius: 0;
+	}
+
+	&.alert-dismissible {
+		padding-right: 0;
+
+		.close {
+			position: relative;
+			padding: 0.5rem 1.25rem;
+			text-shadow: none;
+		}
+	}
+
+	@include media-breakpoint-down(md) {
+		.form-control{
+			margin-bottom: .25rem;
+		}
+	}
+}
+
 .main-menu {
 	width: 100%;
 	padding-top: 1.5rem;
@@ -190,6 +230,20 @@ header {
 			padding: 0;
 			position: relative;
 		}
+	}
+
+	.actions{
+		&:hover .fa-certificate{	
+			animation-name: rotate;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+		}
+	}
+
+	@keyframes rotate {
+		from { transform: rotate(0deg); }
+		to { transform: rotate(360deg); }
 	}
 }
 
@@ -330,12 +384,11 @@ a, .btn-link {
 	}
 }
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-
-	// ПОМЕНЯТЬ
-	line-height: 1.3;
-	margin-bottom: .75rem;
-	padding-top: .5rem;
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	line-height: 1.35;
+	margin-bottom: 1rem;
+	padding-top: .75rem;
 }
 
 .btn {
@@ -343,8 +396,16 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	border: none;
 }
 
+.btn-sm{
+	height: calc(1.8125rem + 2px);
+}
+
 .text-muted{
 	color: $text-muted-color !important;
+}
+
+.blockquote__author{
+	font-size: 80%;
 }
 
 .adv-block{
@@ -374,8 +435,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .gradient{
 	background-image: linear-gradient(90deg,
-		$button-base,
-		$base-gradient-start,
+		$base-crimson,
+		$red,
 		$base-gradient-end
 		);
 }
@@ -399,23 +460,24 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 ​
 .base-gradient {
 	@include gradient($base-gradient-start, $base-gradient-end);
-	color: $button-base;
+	color: $base-crimson;
 }
 
 .color-invert {
 	color: white;
 
 	a {
-		@include link-style($white, $button-base);
+		@include link-style($white, $base-text-color);
 	}
 
 	a.inside {
-		@include inside-link-style($white, $button-base);
+		@include inside-link-style($white, $base-crimson);
 	}
 
 	.text-muted {
 		color: transparentize($white, .7);
 	}
+
 }
 
 .caps-spaced {
@@ -424,7 +486,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 .crimson {
-	color: $button-base !important;
+	color: $base-crimson !important;
 }
 
 .zoom-background {
@@ -450,7 +512,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	.carousel-control-prev,
 	.carousel-control-next {
 		width: 40px;
-		color: $button-base;
+		color: $base-crimson;
 		opacity: 1;
 		border: none;
 		z-index: 2;
@@ -500,16 +562,16 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 			width: 10px;
 			height: 10px;
 			border-radius: 10px;
-			border: 1px solid $button-base;
+			border: 1px solid $base-crimson;
 			background-color: transparent;
 			transition: .2s;
 
 			&:hover{
-				background-color: transparentize($button-base, .5);
+				background-color: transparentize($base-crimson, .5);
 			}
 
 			&.active {
-				background-color: $button-base;
+				background-color: $base-crimson;
 			}
 		}
 	}
@@ -612,7 +674,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	// font-weight: bold;
 
 	.new-price{
-		color: $button-base;
+		color: $base-crimson;
 	}
 
 	.old-price{
@@ -716,35 +778,14 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 // OWL-CAROUSEL
 .owl-carousel{
-	.item {
-		min-height: 10rem;
-	}
-
-	.owl-base-link{
-		display: block;
-		border: none;
-
-		.pic{
-			width: 100%;
-			height: 180px;
-			margin-bottom: .5rem;
-		}
-
-		.price, .new-price{
-			padding-top: 1rem;
-			font-size: 1.23rem;
-			color: $base-text-color;
-			font-weight: 400;
-		}
-	}
-
+	
 	.owl-nav{
 		@include media-breakpoint-down(sm) {
 			display: none;
 		}
 
 		button{
-			color: $button-base !important;
+			color: $base-crimson !important;
 			position: absolute;
 			display: flex;
 			top: 0;
@@ -778,19 +819,19 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 				width: 10px;
 				height: 10px;
 				border-radius: 10px;
-				border: 1px solid $button-base;
+				border: 1px solid $base-crimson;
 				background-color: transparent;
 				transition: .2s;
 				margin: 3px;
 			}
 
 			&:hover span{
-				background-color: transparentize($button-base, .5);
+				background-color: transparentize($base-crimson, .5);
 			}
 
 			&.active {
 				span{
-					background-color: $button-base;
+					background-color: $base-crimson;
 				}
 			}
 		}
@@ -808,6 +849,41 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	}
 }
 
+// CATALOGUE
+.catalogue{
+	.item{
+		min-height: 10rem;
+		margin-bottom: 2rem;
+
+		h4 {
+			font-size: 1rem;
+		}
+
+		.pic{
+			position: relative;
+			width: 100%;
+			margin-bottom: .5rem;
+			height: 180px;
+
+			@include media-breakpoint-up(xl){
+				height: 210px;
+			}
+		}
+
+		.catalogue-base-link{
+			display: block;
+			border: none;
+
+			.price, .new-price{
+				padding-top: 1rem;
+				font-size: 1.23rem;
+				color: $base-text-color;
+				font-weight: 400;
+			}
+		}
+	}
+}
+
 // FORMS
 form {
 	.form-control {
@@ -821,6 +897,17 @@ form {
 		.form-control {
 			width: 150px;
 		}
+	}
+
+	.color-invert & input::placeholder{
+		color: white;
+	}
+
+	.color-invert & .form-control:focus{
+		color: $base-text-color;
+	}
+	.color-invert & .form-control{
+		color: white;
 	}
 }
 

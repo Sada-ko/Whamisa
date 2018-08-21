@@ -31,28 +31,10 @@ $(document).ready(function () {
 // 	// interval: 2000000
 // })
 
-// OWL-carousel
-// $('.owl-carousel').owlCarousel({
-//     loop:true,
-//     margin:10,
-//     nav:true,
-//     responsive:{
-//         0:{
-//             items:1
-//         },
-//         600:{
-//             items:3
-//         },
-//         1000:{
-//             items:5
-//         }
-//     }
-// })
-
 $('.new-items .owl-carousel').owlCarousel({
 	loop:true,
 	margin:15,
-	autoplay:true,
+	// autoplay:true,
 	// navContainerClass:"owl-nav",
 	// navClass:["carousel-control-prev","carousel-control-next"],	
 	navText: ["<i class='fal fa-angle-left fa-2x' aria-hidden='true'></i>","<i class='fal fa-angle-right fa-2x' aria-hidden='true'></i>"],
