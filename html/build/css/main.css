@@ -8656,7 +8656,8 @@ h1, h2, h3, h4, h5, h6,
       .week-offer .adv-block-name {
         margin-bottom: 1rem; } }
     .week-offer .adv-block-name h3 {
-      padding-top: 0; }
+      padding-top: 0;
+      margin-bottom: .5rem; }
   .week-offer .pic {
     position: relative;
     height: 250px; }
