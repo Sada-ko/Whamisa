@@ -217,6 +217,7 @@ header {
 	width: 100%;
 	padding-top: 1.5rem;
 	margin-bottom: .5rem;
+	font-weight: 400 !important;
 
 	@include media-breakpoint-down(sm) {
 		padding-top: 0;
@@ -233,6 +234,10 @@ header {
 	}
 
 	.actions{
+		span{
+			top: -2px;
+		}
+		
 		&:hover .fa-certificate{	
 			animation-name: rotate;
 			animation-duration: 2s;
@@ -252,7 +257,7 @@ header {
 
 	&.scrolling{
 
-		@include media-breakpoint-down(md){	
+		@include media-breakpoint-down(md) {	
 			li{
 				margin-left: 0;
 			}
@@ -370,7 +375,7 @@ header {
 header{
 	margin-bottom: 5rem;
 
-	@include media-breakpoint-down(md){
+	@include media-breakpoint-down(md) {
 		margin-bottom: 4rem;	
 	}
 }
@@ -389,6 +394,7 @@ h1, h2, h3, h4, h5, h6,
 	line-height: 1.35;
 	margin-bottom: 1rem;
 	padding-top: .75rem;
+	font-weight: 400;
 }
 
 .btn {
@@ -412,6 +418,7 @@ h1, h2, h3, h4, h5, h6,
 	.adv-block-head{
 		text-align: center;
 		font-size: 1rem;
+		font-weight: 500;
 	}
 
 	.adv-block-head{
@@ -483,6 +490,7 @@ h1, h2, h3, h4, h5, h6,
 .caps-spaced {
 	text-transform: uppercase;
 	letter-spacing: .025rem;
+	font-weight: 500;
 }
 
 .crimson {
@@ -602,6 +610,10 @@ h1, h2, h3, h4, h5, h6,
 		margin-bottom: 3rem;
 	}
 
+	.price{
+		font-size: 2.25rem;
+	}
+
 	.adv-block-body{
 		@include make-row();
 		margin: 0;
@@ -670,8 +682,8 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .price{
-	font-size: 2.25rem;
-	// font-weight: bold;
+	// font-size: 2.25rem;
+	// font-weight: 500;
 
 	.new-price{
 		color: $base-crimson;
@@ -857,6 +869,7 @@ h1, h2, h3, h4, h5, h6,
 
 		h4 {
 			font-size: 1rem;
+			margin-bottom: .5rem;
 		}
 
 		.pic{
@@ -865,7 +878,7 @@ h1, h2, h3, h4, h5, h6,
 			margin-bottom: .5rem;
 			height: 180px;
 
-			@include media-breakpoint-up(xl){
+			@include media-breakpoint-up(xl) {
 				height: 210px;
 			}
 		}
@@ -878,7 +891,7 @@ h1, h2, h3, h4, h5, h6,
 				padding-top: 1rem;
 				font-size: 1.23rem;
 				color: $base-text-color;
-				font-weight: 400;
+				font-weight: 500;
 			}
 		}
 	}
