@@ -8125,7 +8125,7 @@ header {
   -webkit-transition: .2s;
   -o-transition: .2s;
   transition: .2s;
-  margin-top: -50px; }
+  display: none; }
   .alert-top.show {
     margin-top: 0; }
   .alert-top.alert {
@@ -8655,6 +8655,8 @@ h1, h2, h3, h4, h5, h6,
     @media (min-width: 768px) {
       .week-offer .adv-block-name {
         margin-bottom: 1rem; } }
+    .week-offer .adv-block-name h3 {
+      padding-top: 0; }
   .week-offer .pic {
     position: relative;
     height: 250px; }

@@ -179,7 +179,15 @@ header {
 	background-color: $base-crimson;
 	padding: .5rem 1.25rem;
 	transition: .2s;
-	margin-top: -50px;
+	display: none;
+
+	@include media-breakpoint-up(lg) {
+		// margin-top: -80px;
+	}
+
+	@include media-breakpoint-up(xl) {
+		// margin-top: -50px;
+	}
 
 	&.show{
 		margin-top: 0;
@@ -649,6 +657,10 @@ h1, h2, h3, h4, h5, h6,
 
 		@include media-breakpoint-up(md) {
 			margin-bottom: 1rem;
+		}
+
+		h3{
+			padding-top: 0;
 		}
 	}
 
