@@ -107,3 +107,9 @@
     transform: scale(1.05);
   }
 }
+
+@mixin target-metro {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @content;
+  }
+}

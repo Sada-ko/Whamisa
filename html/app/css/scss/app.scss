@@ -15,11 +15,11 @@ body {
 	}
 
 	@include media-breakpoint-down(lg) {
-		margin-bottom: calc(350px + 4rem);
+		margin-bottom: calc(390px + 4rem);
 	}
 
 	@include media-breakpoint-down(sm) {
-		margin-bottom: calc(500px + 4rem);
+		margin-bottom: calc(570px + 4rem);
 	}
 }
 
@@ -35,6 +35,7 @@ header {
 		text-align: center;
 		left: 0;
 		right: 0;
+		top: 0;
 		display: inline-block;
 		background-image: url('../img/whamisa-logo.gif');
 		background-size: contain;
@@ -177,20 +178,32 @@ header {
 // ALERT
 .alert-top{
 	background-color: $base-crimson;
-	padding: .5rem 1.25rem;
+	padding: 1rem 1.25rem .5rem 1.25rem;
 	transition: .2s;
-	display: none;
 
 	@include media-breakpoint-up(lg) {
-		// margin-top: -80px;
+		margin-top: -5rem;
 	}
 
-	@include media-breakpoint-up(xl) {
-		// margin-top: -50px;
+	@include media-breakpoint-down(lg) {
+		margin-top: -6.5rem;
+	}
+	
+	@include media-breakpoint-down(md) {
+		margin-top: -7.5rem;
+	}
+
+	@include media-breakpoint-down(sm) {
+		margin-top: -8.5rem;
+	}
+
+	.declare{
+		padding-top: .75rem;
 	}
 
 	&.show{
-		margin-top: 0;
+		margin-top: -.5rem;
+		display: block;
 	}
 
 	.subscribe-form{
@@ -359,14 +372,27 @@ header {
 	font-size: 80%;
 	left: -1rem !important;
 
+	@include media-breakpoint-down(md) {
+		font-size: 100%;
+	}
+
 	a{
 		@include link-style($link-color, $link-hover-color);
-		margin-bottom: .25rem;
 		color: $base-text-color;
 
 		&:hover{
 			background: none;
 		}
+
+		&:not(:last-child) {
+			margin-bottom: .5rem;
+		}
+	}
+}
+
+li.show{
+	& > a{
+		color: $red;
 	}
 }
 
@@ -385,6 +411,10 @@ header{
 
 	@include media-breakpoint-down(md) {
 		margin-bottom: 4rem;	
+	}
+
+	@include media-breakpoint-down(md) {
+		margin-bottom: 3rem;	
 	}
 }
 
@@ -427,20 +457,22 @@ h1, h2, h3, h4, h5, h6,
 		text-align: center;
 		font-size: 1rem;
 		font-weight: 500;
-	}
+		margin-bottom: 1.25rem;
 
-	.adv-block-head{
-		margin-bottom: 1rem;
+		@include media-breakpoint-down(sm) {	
+			text-align: left;
+		}
 	}
 
 	.adv-block-body{
 		h3{
-			font-size: 1.25rem;
+			font-size: 1rem;
 		}
 	}
+
 	h4{
-		font-size: 1rem;
 		line-height: 1.3;
+		font-size: 1rem;
 	}
 
 	.pic{
@@ -461,6 +493,11 @@ h1, h2, h3, h4, h5, h6,
 	background-size: 200% 200%;
 	color: transparent;
 	-webkit-background-clip: text;
+
+	@include target-metro {
+		background: none;
+		color: $base-crimson;
+	}
 
 	&.animated{
 		animation: move-background 3s linear infinite;
@@ -618,8 +655,16 @@ h1, h2, h3, h4, h5, h6,
 		margin-bottom: 3rem;
 	}
 
+	@include media-breakpoint-up(sm){
+		font-size: 125%;
+
+		h3{
+			font-size: 1.25rem !important;
+		}
+	}
+
 	.price{
-		font-size: 2.25rem;
+		font-size: 2rem;
 	}
 
 	.adv-block-body{
@@ -670,8 +715,8 @@ h1, h2, h3, h4, h5, h6,
 		height: 250px;
 
 		@include media-breakpoint-down(md) {
-			@include make-col(12);
-			margin-bottom: 1.25rem;
+			@include make-col(10);
+			margin-bottom: 1rem;
 		}
 
 		@include media-breakpoint-up(md) {
@@ -692,6 +737,11 @@ h1, h2, h3, h4, h5, h6,
 			padding-left: 15px;
 		}
 	}
+}
+
+.original-name{
+	margin-bottom: .75rem;
+	font-size: 80%;
 }
 
 .price{
@@ -760,6 +810,10 @@ h1, h2, h3, h4, h5, h6,
 		@include media-breakpoint-down(sm) {
 			display: none;			
 		}
+
+		@include media-breakpoint-up(xxl) {
+			@include make-col(5);
+		}
 	}
 
 	.carousel-caption{
@@ -777,6 +831,10 @@ h1, h2, h3, h4, h5, h6,
 		@include media-breakpoint-down(sm) {
 			@include make-col(12);
 			padding-left: 0;
+		}
+
+		@include media-breakpoint-up(xxl) {
+			@include make-col(7);
 		}
 
 		.inner{
@@ -901,11 +959,17 @@ h1, h2, h3, h4, h5, h6,
 			border: none;
 
 			.price, .new-price{
-				padding-top: 1rem;
+				// padding-top: 1rem;
 				font-size: 1.23rem;
 				color: $base-text-color;
 				font-weight: 500;
 			}
+		}
+	}
+
+	&.owl-carousel {
+		.item{
+			margin-bottom: 0;
 		}
 	}
 }
@@ -952,12 +1016,12 @@ form {
 
 	@include media-breakpoint-down(lg) {
 		padding-top: 40px;
-		height: 350px;
+		height: 390px;
 	}
 
 	@include media-breakpoint-down(sm) {
 		padding-top: 30px;
-		height: 500px;
+		height: 570px;
 	}
 
 	h3 {
@@ -980,6 +1044,10 @@ form {
 
 		li {
 			margin-bottom: .25rem;
+
+			@include media-breakpoint-down(md){
+				margin-bottom: .4rem;
+			}
 		}
 	}
 
@@ -1046,6 +1114,12 @@ form {
 
 		@include media-breakpoint-down(sm) {
 			@include make-col(6);
+		}
+
+		&.contacts{
+			@include media-breakpoint-down(sm) {
+				@include make-col(12);
+			}
 		}
 	}
 }

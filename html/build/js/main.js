@@ -15124,13 +15124,7 @@ $(document).ready(function () {
 });
 
 
-// Bootstrap Carousel
-// $('.carousel').carousel()
-
-// $('.carousel').carousel({
-// 	// interval: 2000000
-// })
-
+// OWL CAROUSEL
 $('.new-items .owl-carousel').owlCarousel({
 	loop:true,
 	margin:15,
@@ -15156,7 +15150,7 @@ $('.owl-carousel.articles-tease').owlCarousel({
 	loop:true,
 	// autoplay:true,
 	animateOut: 'fadeOut',
-    animateIn: 'fadeIn',
+	animateIn: 'fadeIn',
 	navText: ["<i class='fal fa-angle-left fa-2x' aria-hidden='true'></i>","<i class='fal fa-angle-right fa-2x' aria-hidden='true'></i>"],
 	// nav:true,
 	autoplayTimeout:20000,
