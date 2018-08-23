@@ -27,18 +27,18 @@
   }
 
   &:focus{
-     color: $link-color;
-  }
+   color: $link-color;
+ }
 
-  &.disabled, .disabled & {
-    border: none;
-    cursor: default;
-    &:hover {
-      color: $text-muted;
-    }
+ &.disabled, .disabled & {
+  border: none;
+  cursor: default;
+  &:hover {
+    color: $text-muted;
   }
+}
 
-  &.active, .active > &, &.show > a {
+&.active, .active > &, &.show > a {
   // &.active, .active > &, .show > & {
     cursor: default;
     // font-weight: bold;

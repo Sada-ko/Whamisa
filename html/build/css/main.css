@@ -8768,10 +8768,24 @@ header {
     .alert-top {
       margin-top: -8.5rem; } }
   .alert-top .declare {
-    padding-top: .75rem; }
+    padding-top: .5rem; }
   .alert-top.show {
     margin-top: -.5rem;
     display: block; }
+  .alert-top .subscribe-form form {
+    margin-top: 1rem; }
+  @media (min-width: 768px) {
+    .alert-top .subscribe-form {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify !important;
+      -webkit-justify-content: space-between !important;
+          -ms-flex-pack: justify !important;
+              justify-content: space-between !important; }
+      .alert-top .subscribe-form form {
+        margin-top: .5rem; } }
   .alert-top.alert {
     padding-right: 0;
     padding-left: 0;
@@ -8784,6 +8798,11 @@ header {
       position: relative;
       padding: 0.5rem 1.25rem;
       text-shadow: none; }
+      @media (max-width: 991.98px) {
+        .alert-top.alert-dismissible .close {
+          top: auto;
+          bottom: .5rem;
+          position: absolute; } }
   @media (max-width: 991.98px) {
     .alert-top .form-control {
       margin-bottom: .25rem; } }
@@ -8832,7 +8851,8 @@ header {
 
 @media (max-width: 991.98px) {
   .main-menu.scrolling li {
-    margin-left: 0; } }
+    margin-left: 0;
+    padding-top: .15em; } }
 
 .main-menu.scrolling .nav-item:last-child {
   padding-right: 40px; }
@@ -8944,7 +8964,7 @@ header {
     .dropdown-menu a:hover {
       background: none; }
     .dropdown-menu a:not(:last-child) {
-      margin-bottom: .5rem; }
+      margin-bottom: .75rem; }
 
 li.show > a {
   color: #ff2d55; }
@@ -9022,10 +9042,23 @@ a, .btn-link {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  line-height: 1.35;
-  margin-bottom: 1rem;
-  padding-top: .75rem;
-  font-weight: 400; }
+  line-height: 1.3;
+  margin-bottom: .75em;
+  font-weight: 400;
+  margin-top: 1.25em; }
+  @media (max-width: 991.98px) {
+    h1, h2, h3, h4, h5, h6,
+    .h1, .h2, .h3, .h4, .h5, .h6 {
+      line-height: 1.2;
+      margin-bottom: .6em;
+      margin-top: 1.2em; } }
+
+h1, .h1 {
+  margin-top: 0; }
+
+h2:first-child, h3:first-child, h4:first-child, h5:first-child,
+h1 + h2, h2 + h3, h3 + h4, h4 + h5 {
+  margin-top: 0; }
 
 .btn {
   font-weight: normal !important;
@@ -9035,11 +9068,36 @@ h1, h2, h3, h4, h5, h6,
   height: -webkit-calc(1.8125rem + 2px);
   height: calc(1.8125rem + 2px); }
 
+.btn-primary {
+  background-color: #a02842; }
+  .btn-primary:hover {
+    background-color: #631929; }
+
+.btn-secondary {
+  background-color: #ffcdd7;
+  color: #a02842; }
+  .btn-secondary:hover {
+    background-color: #ff819a;
+    color: #a02842; }
+
 .text-muted {
   color: #cacaca !important; }
 
-.blockquote__author {
-  font-size: 80%; }
+.blockquote {
+  border-bottom: 4px solid #ffcdd7;
+  border-top: 4px solid #ffcdd7;
+  margin: 1.5em 2em 3rem;
+  max-width: 600px; }
+  @media (max-width: 767.98px) {
+    .blockquote {
+      margin: 1em 0 1.5em; } }
+  .blockquote .blockquote__text {
+    line-height: 1.4;
+    margin-bottom: .4em;
+    padding-top: .75em;
+    position: relative; }
+  .blockquote .blockquote__author {
+    font-size: .8rem; }
 
 .adv-block .adv-block-head {
   text-align: center;
@@ -9170,6 +9228,73 @@ h1, h2, h3, h4, h5, h6,
 .crimson {
   color: #a02842 !important; }
 
+.table {
+  width: auto;
+  max-width: 100%; }
+  .table thead th {
+    font-weight: normal;
+    font-size: .8rem;
+    vertical-align: top;
+    border-bottom: 2px solid rgba(202, 202, 202, 0.5); }
+  .table th,
+  .table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid rgba(202, 202, 202, 0.5); }
+
+.modal-body, .modal-header {
+  padding: 1.5rem; }
+
+form {
+  line-height: 1.35; }
+  form fieldset {
+    margin-bottom: .75rem; }
+  @media (max-width: 767.98px) {
+    form fieldset {
+      margin-bottom: 1rem; } }
+  form .form-control-wrapper {
+    position: relative; }
+    form .form-control-wrapper .invalid-feedback {
+      width: 80%;
+      display: block;
+      position: absolute;
+      font-size: 65%;
+      color: #ff2d55;
+      bottom: -.85rem; }
+  form .form-group {
+    margin-bottom: 1.25rem; }
+    @media (max-width: 767.98px) {
+      form .form-group {
+        margin-bottom: 1rem; } }
+  form .form-control {
+    border: none;
+    background-color: rgba(202, 202, 202, 0.25); }
+  form.search-form {
+    width: 250px; }
+    form.search-form .form-control {
+      width: 150px; }
+  form .form-check-input:disabled ~ .form-check-label {
+    color: #cacaca; }
+  .color-invert form input::-webkit-input-placeholder {
+    color: white; }
+  .color-invert form input::-moz-placeholder {
+    color: white; }
+  .color-invert form input:-ms-input-placeholder {
+    color: white; }
+  .color-invert form input::-ms-input-placeholder {
+    color: white; }
+  .color-invert form input::placeholder {
+    color: white; }
+  .color-invert form .form-control:focus {
+    color: black; }
+  .color-invert form .form-control {
+    color: white; }
+  form .form-control:disabled, form .form-control[readonly] {
+    background-color: rgba(202, 202, 202, 0.75); }
+
+.common-form-container {
+  max-width: 700px; }
+
 .zoom-background {
   position: absolute;
   width: 100%;
@@ -9192,9 +9317,29 @@ h1, h2, h3, h4, h5, h6,
         -ms-transform: scale(1.05);
             transform: scale(1.05); }
 
-/* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
-/* Carousel base class */
+.full-article {
+  padding-top: 2rem; }
+  @media (max-width: 1199.98px) {
+    .full-article {
+      padding-top: 1.5rem;
+      line-height: 1.4rem; } }
+  @media (min-width: 1200px) {
+    .full-article {
+      line-height: 1.5rem; } }
+  @media (min-width: 1800px) {
+    .full-article {
+      line-height: 1.6rem; } }
+  .full-article img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem; }
+
+.image-description {
+  margin-top: -.5rem;
+  font-size: 80%;
+  margin-bottom: 1rem;
+  color: #cacaca; }
+
 .carousel {
   /* Since positioning the image, we need to help out the caption */
   /* Declare heights because of positioning of img element */ }
@@ -9542,6 +9687,39 @@ h1, h2, h3, h4, h5, h6,
     @media (min-width: 1200px) {
       .catalogue .item .pic {
         height: 210px; } }
+  .catalogue .item .add-favs {
+    position: absolute;
+    background-color: white;
+    -webkit-border-radius: 100%;
+            border-radius: 100%;
+    padding: .5rem;
+    color: #ff2d55;
+    z-index: 10;
+    width: 37px;
+    height: 37px;
+    opacity: 0;
+    right: .5rem;
+    top: .75rem;
+    -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+    border: none; }
+    .catalogue .item .add-favs .full {
+      opacity: 0;
+      -webkit-transition: .2s;
+      -o-transition: .2s;
+      transition: .2s;
+      position: absolute; }
+    .catalogue .item .add-favs .empty {
+      position: absolute; }
+    .catalogue .item .add-favs:hover .empty {
+      opacity: 0;
+      -webkit-transition: .2s;
+      -o-transition: .2s;
+      transition: .2s; }
+    .catalogue .item .add-favs:hover .full {
+      opacity: 1; }
+  .catalogue .item:hover .add-favs {
+    opacity: 1; }
   .catalogue .item .catalogue-base-link {
     display: block;
     border: none; }
@@ -9552,36 +9730,6 @@ h1, h2, h3, h4, h5, h6,
 
 .catalogue.owl-carousel .item {
   margin-bottom: 0; }
-
-form .form-control {
-  border: none;
-  background-color: rgba(202, 202, 202, 0.25); }
-
-form.search-form {
-  width: 250px; }
-  form.search-form .form-control {
-    width: 150px; }
-
-.color-invert form input::-webkit-input-placeholder {
-  color: white; }
-
-.color-invert form input::-moz-placeholder {
-  color: white; }
-
-.color-invert form input:-ms-input-placeholder {
-  color: white; }
-
-.color-invert form input::-ms-input-placeholder {
-  color: white; }
-
-.color-invert form input::placeholder {
-  color: white; }
-
-.color-invert form .form-control:focus {
-  color: black; }
-
-.color-invert form .form-control {
-  color: white; }
 
 .footer {
   background-image: url("../img/rose-pattern-bg.jpg");
