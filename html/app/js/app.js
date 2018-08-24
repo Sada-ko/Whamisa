@@ -28,7 +28,7 @@ $(document).ready(function () {
 $('.new-items .owl-carousel').owlCarousel({
 	loop:true,
 	margin:15,
-	// autoplay:true,
+	autoplay:true,
 	// navContainerClass:"owl-nav",
 	// navClass:["carousel-control-prev","carousel-control-next"],	
 	navText: ["<i class='fal fa-angle-left fa-2x' aria-hidden='true'></i>","<i class='fal fa-angle-right fa-2x' aria-hidden='true'></i>"],
@@ -48,7 +48,7 @@ $('.new-items .owl-carousel').owlCarousel({
 
 $('.owl-carousel.articles-tease').owlCarousel({
 	loop:true,
-	// autoplay:true,
+	autoplay:true,
 	animateOut: 'fadeOut',
 	animateIn: 'fadeIn',
 	navText: ["<i class='fal fa-angle-left fa-2x' aria-hidden='true'></i>","<i class='fal fa-angle-right fa-2x' aria-hidden='true'></i>"],
@@ -59,7 +59,7 @@ $('.owl-carousel.articles-tease').owlCarousel({
 
 $('.owl-carousel.main-carousel').owlCarousel({
 	loop:true,
-	// autoplay:true,
+	autoplay:true,
 	navText: ["<i class='fal fa-angle-left fa-2x' aria-hidden='true'></i>","<i class='fal fa-angle-right fa-2x' aria-hidden='true'></i>"],
 	nav:true,
 	autoplayTimeout:20000,
