@@ -175,6 +175,10 @@ header {
 	}
 }
 
+main{
+	padding-top: 1rem;
+}
+
 // ALERT
 .alert-top{
 	background-color: $base-crimson;
@@ -390,6 +394,8 @@ header {
 	padding: 1rem;
 	font-size: 80%;
 	left: -1rem !important;
+	transform: none !important;
+	top: 1.5rem !important;
 
 	@include media-breakpoint-down(md) {
 		font-size: 100%;
@@ -421,8 +427,8 @@ li.show{
 	z-index: 2;
 }
 
-.menuLimiter{
-	padding-bottom: 140px;
+.menuLimiter.opened{
+	padding-bottom: 90px;
 }
 
 header{
@@ -715,7 +721,7 @@ form {
 }
 
 .full-article{
-	padding-top: 2rem;
+	// padding-top: 2rem;
 	
 	@include media-breakpoint-down(lg) {
 		padding-top: 1.5rem;
@@ -749,6 +755,7 @@ form {
 
 	&.main-carousel{		
 		margin-bottom: 4rem;
+		margin-top: -1rem;
 
 		@include media-breakpoint-down(md) {
 			margin-bottom: 3rem;
@@ -1133,6 +1140,7 @@ form {
 	.item{
 		min-height: 10rem;
 		margin-bottom: 2rem;
+		position: relative;
 
 		h4 {
 			font-size: 1rem;
@@ -1160,10 +1168,22 @@ form {
 			width: 37px;
 			height: 37px;
 			opacity: 0;
-			right: .5rem;
+			right: 1.5rem;
 			top: .75rem;
 			box-shadow: 1px 1px 5px transparentize($base-text-color, .75);
 			border: none;
+
+			&.checked{
+				opacity: 1;
+
+				.full{
+					opacity: 1;
+				}
+
+				.empty{
+					opacity: 0;
+				}
+			}
 
 			.full{
 				opacity: 0;
@@ -1207,6 +1227,27 @@ form {
 	&.owl-carousel {
 		.item{
 			margin-bottom: 0;
+		}
+	}
+
+	&.full{
+		@include make-row();
+		margin-left: -15px;
+		margin-right: -15px;
+
+		.item{
+			@include media-breakpoint-down(md) {
+				@include make-col(6);
+			}
+			@include media-breakpoint-up(md) {
+				@include make-col(4);
+			}
+			@include media-breakpoint-up(xl) {
+				@include make-col(3);
+			}
+
+			padding-right: 15px;
+			padding-left: 15px;
 		}
 	}
 }
