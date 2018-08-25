@@ -17,10 +17,10 @@
 //= ../../node_modules/owl.carousel/dist/owl.carousel.min.js
 
 // FONT AWESOME
-//= fontawesome.min.js
-//= brands.min.js
-//= light.min.js
-//= solid.min.js
+//= ../../../fa/fontawesome.min.js
+//= ../../../fa/brands.min.js
+//= ../../../fa/light.min.js
+//= ../../../fa/solid.min.js
 
 // Импортируем другие js-файлы
 //= app.js
