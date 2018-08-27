@@ -1260,18 +1260,33 @@ form {
 		column-gap: 1em;
 	}
 
-	.favorite-full{
-		.full{
-			display: none;
+	.item-block {
+		padding: 0 15px;
+		margin-bottom: 1rem;
+		display: inline-block;
+		max-width: 100%;
+
+		@include media-breakpoint-down(sm) {
+			padding: 0;
 		}
 
-		&.checked{
-			.empty{
-			display: none;
+		img {
+			max-width: 100%;
 		}
-		.full{
-			display: block;
-		}
+		
+		.favorite-full{
+			.full{
+				display: none;
+			}
+
+			&.checked{
+				.empty{
+					display: none;
+				}
+				.full{
+					display: block;
+				}
+			}
 		}
 	}
 }
