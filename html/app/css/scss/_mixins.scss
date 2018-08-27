@@ -6,6 +6,10 @@
   border-bottom: 1px solid transparentize($link-color, .7);
   transition: .2s;
 
+  &.dotted{
+    border-bottom-style: dashed !important;
+  }
+
   &:hover {
     color: $link-hover-color;
     border-bottom-color: transparentize($link-hover-color, .7) !important;

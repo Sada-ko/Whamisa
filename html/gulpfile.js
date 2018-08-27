@@ -95,10 +95,19 @@ gulp.task('js:build', function () {
 // обработка картинок
 gulp.task('image:build', function () {
     gulp.src(path.src.img) // путь с исходниками картинок
-    .pipe(imagemin())
+        .pipe(cache(imagemin([ // сжатие изображений
+            imagemin.gifsicle({interlaced: true}),
+            jpegrecompress({
+                progressive: true,
+                max: 90,
+                min: 51
+            }),
+            pngquant(),
+            imagemin.svgo({plugins: [{removeViewBox: false}]})
+        ])))
         .pipe(gulp.dest(path.build.img)) // выгрузка готовых файлов
         .pipe(browserSync.reload({stream: true})); //И перезагрузим сервер})
-    });
+});
 
 // HTML build
 gulp.task('html:build', function () {

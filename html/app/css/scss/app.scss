@@ -1252,6 +1252,30 @@ form {
 	}
 }
 
+// CARD-ITEM
+.card-item-wrapper{
+	@include media-breakpoint-up(lg) {
+		column-count: 2;
+		column-width: 50%;
+		column-gap: 1em;
+	}
+
+	.favorite-full{
+		.full{
+			display: none;
+		}
+
+		&.checked{
+			.empty{
+			display: none;
+		}
+		.full{
+			display: block;
+		}
+		}
+	}
+}
+
 .footer {
 	background-image: url('../img/rose-pattern-bg.jpg');
 	position: absolute;
