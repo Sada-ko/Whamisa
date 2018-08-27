@@ -618,6 +618,18 @@ h1 + h2, h2 + h3, h3 + h4, h4 + h5 {
 	color: $base-crimson !important;
 }
 
+ul {
+	li{
+		margin-bottom: .5em;
+	}
+}
+
+ol {
+	li{
+		margin-bottom: .5em;
+	}
+}
+
 // TABLES
 .table {
 	width: auto;
@@ -663,7 +675,7 @@ form {
 
 		.invalid-feedback {
 			width: 80%;
-			display: block;
+			// display: block;
 			position: absolute;
 			font-size: 65%;
 			color: $red;
