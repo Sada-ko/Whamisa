@@ -450,6 +450,18 @@ a, .btn-link {
 	&.inside {
 		@include inside-link-style($link-color, $link-hover-color);
 	}
+
+	&.crimson{
+		@include link-style($base-crimson, $link-hover-color);
+	}
+
+	&.crimson.inside {
+		@include inside-link-style($base-crimson, $link-hover-color);
+	}
+
+	&.dotted {
+		border-bottom-style: dotted !important;
+	}
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -487,18 +499,15 @@ h1 + h2, h2 + h3, h3 + h4, h4 + h5 {
 
 .btn-primary {
 	background-color: $base-crimson;
-
-	&:hover {
-		background-color: darken($base-crimson, 15%);
-	}
+	@include btn-colors($base-crimson);
 }
 
 .btn-secondary{
 	background-color: $base-gradient-end;
 	color: $base-crimson;
+	@include btn-colors($base-gradient-end);
 
 	&:hover {
-		background-color: darken($base-gradient-end, 15%);
 		color: $base-crimson;
 	}
 }

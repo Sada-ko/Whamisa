@@ -7,7 +7,7 @@
   transition: .2s;
 
   &.dotted{
-    border-bottom-style: dashed !important;
+    border-bottom-style: dotted !important;
   }
 
   &:hover {
@@ -64,6 +64,11 @@
       border-bottom-color: transparentize($text-muted, .7);
     }
   }
+  &.dotted{
+    span {
+      border-bottom-style: dotted !important;
+    }
+  }
   &:hover {
     transition: .2s;
     color: $link-hover-color !important;
@@ -81,8 +86,23 @@
   }
 }
 
-@mixin box-btn-shadow {
-  box-shadow: 0 0 0 3px transparentize($button-base, .8);
+@mixin btn-colors($base-button) {
+  &:hover {
+    background-color: darken($base-button, 15%);
+  }
+  
+  &:not(:disabled):not(.disabled).active,
+  &:not(:disabled):not(.disabled):active,
+  .show > &.dropdown-toggle {
+    color: #fff;
+    background-color: darken($base-button, 15%);
+    border-color: darken($base-button, 15%);
+  }
+
+  &.focus,
+  &:focus {
+    box-shadow: 0 0 0 .2rem transparentize($base-button, .7);
+  }
 }
 
 @mixin gradient($from, $to) {
