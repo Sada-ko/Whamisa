@@ -28,7 +28,7 @@ $(document).ready(function () {
 $('.new-items .owl-carousel').owlCarousel({
 	loop:true,
 	margin:15,
-	autoplay:true,
+	// autoplay:true,
 	// navContainerClass:"owl-nav",
 	// navClass:["carousel-control-prev","carousel-control-next"],	
 	navText: ["<i class='fal fa-angle-left fa-2x' aria-hidden='true'></i>","<i class='fal fa-angle-right fa-2x' aria-hidden='true'></i>"],
@@ -41,7 +41,7 @@ $('.new-items .owl-carousel').owlCarousel({
 			items:3
 		},
 		1000:{
-			items:5
+			items:4
 		}
 	}
 })
