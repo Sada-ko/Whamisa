@@ -87,3 +87,8 @@ $(document).ready(function () {
 }, false);
 	})();
 });
+
+// TOOLTIP
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
