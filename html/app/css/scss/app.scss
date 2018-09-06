@@ -203,6 +203,11 @@ main{
 
 	.declare{
 		padding-top: .5rem;
+		margin-right: 1rem;
+
+		@include media-breakpoint-down(md) {
+			margin-right: 0;
+		}
 	}
 
 	&.show{
@@ -218,10 +223,12 @@ main{
 
 		@include media-breakpoint-up(md) {
 			display: flex;
-			justify-content: space-between !important;
+			justify-content: center !important;
 
 			form {
 				margin-top: .5rem;
+				margin-right: 1rem;
+				margin-left: 1rem;
 			}
 		}
 	}

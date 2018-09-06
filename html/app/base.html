@@ -4,6 +4,38 @@
 //= head.html
 
 <body>
+	
+	<!-- TOP ALERT -->
+	<!-- Надо добавить класс show для того, чтобы он вылез -->
+	<div class="alert alert-top show alert-dismissible fade color-invert" role="alert">
+
+		<!-- Форма для подписки на рассылку -->
+		<div class="container subscribe-form">
+			<div class="declare">
+				<i class="fas fa-gift fa-lg mr-1" data-fa-transform="shrink-2"></i>
+				Получите 15%&nbsp;скидки на&nbsp;первый заказ!
+				<i class="fas fa-gift fa-lg ml-1" data-fa-transform="shrink-2"></i>
+			</div>
+
+			<form class="form-inline mt-md-0">
+				<input class="form-control form-control-sm mr-sm-2" type="email" placeholder="Электронная почта" aria-label="email" type="text">
+				<button class="btn btn-sm btn-danger my-2 my-sm-0" type="submit">Подписаться</button>
+			</form>
+			
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+
+		<!-- Если подписался, выводим ЭТО (убираем класс d-none) -->
+		<div class="container subscribe-ok d-none">
+			<div class="py-2 text-center">
+				<i class="fas fa-badge-check fa-lg mr-1" data-fa-transform="shrink-2"></i>
+				Всё супер, вы&nbsp;подписались!
+			</div>
+		</div>
+	</div>
+
 
 	//= header.html
 
