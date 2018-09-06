@@ -427,7 +427,7 @@ li.show{
 	z-index: 2;
 }
 
-.menuLimiter.opened{
+.menuLimiter.opened {
 	padding-bottom: 90px;
 }
 
@@ -480,6 +480,10 @@ h1, h2, h3, h4, h5, h6,
 
 h1, .h1{
 	margin-top: 0;
+}
+
+h4, .h4{
+	font-size: $h4-size;
 }
 
 h2:first-child, h3:first-child, h4:first-child, h5:first-child,
@@ -552,13 +556,13 @@ h1 + h2, h2 + h3, h3 + h4, h4 + h5 {
 
 	.adv-block-body{
 		h3{
-			font-size: 1rem;
+			// font-size: 1rem;
 		}
 	}
 
 	h4{
 		line-height: 1.3;
-		font-size: 1rem;
+		// font-size: 1rem;
 	}
 
 	.pic{
@@ -879,16 +883,16 @@ form {
 		margin-bottom: 3rem;
 	}
 
-	@include media-breakpoint-up(sm){
-		font-size: 125%;
+	@include media-breakpoint-up(sm) {
+		// font-size: 125%;
 
 		h3{
-			font-size: 1.25rem !important;
+			// font-size: 1.25rem !important;
 		}
 	}
 
 	.price{
-		font-size: 2rem;
+		font-size: $h2-size;
 	}
 
 	.adv-block-body{
@@ -922,7 +926,10 @@ form {
 	}
 
 	.adv-block-name{
-		margin-bottom: .75rem;
+
+		h4, .h4{
+			margin-bottom: .5em;
+		}
 
 		@include media-breakpoint-up(md) {
 			margin-bottom: 1rem;
@@ -930,7 +937,7 @@ form {
 
 		h3{
 			padding-top: 0;
-			margin-bottom: .5rem;
+			margin-bottom: .5em;
 		}
 	}
 
@@ -964,13 +971,38 @@ form {
 }
 
 .original-name{
-	margin-bottom: .75rem;
+	margin-bottom: 1.5em;
 	font-size: 80%;
+}
+
+.skin-types{
+	margin-bottom: 1.5rem;
+
+	.skin-type{
+		display: inline-block;
+		color: $base-crimson;
+		border: 1px solid transparentize($base-crimson, .5);
+		padding: .1em .15em;
+		border-radius: .25rem;
+		line-height: 1;
+	}
+
+	&.full{
+		.skin-type{
+			display: inline-block;
+			color: white;
+			border: 1px solid transparentize($base-crimson, .5);
+			padding: .25em;
+			border-radius: .25rem;
+			line-height: 1;
+			background-color: $base-crimson;
+		}
+	}
 }
 
 .price{
 	// font-size: 2.25rem;
-	// font-weight: 500;
+	font-weight: 500;
 
 	.new-price{
 		color: $base-crimson;
@@ -992,24 +1024,24 @@ form {
 	}
 
 	h2{
-		font-size: 2.25rem;
-		margin-bottom: 1.25rem;
+		// margin-bottom: 1.25rem;
+		// font-size: 2.25rem;
 	}
 
-	h3, .h3 {
-		font-size: 1.5rem;
-	}
+	// h3, .h3 {
+		// font-size: 1.5rem;
+	// }
 
-	@include media-breakpoint-down(sm) {
-		h2{
-			font-size: 2rem;
-			margin-bottom: 1.25rem;
-		}
+	// @include media-breakpoint-down(sm) {
+	// 	h2{
+	// 		font-size: 2rem;
+	// 		margin-bottom: 1.25rem;
+	// 	}
 
-		h3, .h3 {
-			font-size: 1.25rem;
-		}
-	}
+	// 	h3, .h3 {
+	// 		font-size: 1.25rem;
+	// 	}
+	// }
 }
 
 .articles-tease{
@@ -1160,7 +1192,7 @@ form {
 .catalogue{
 	.item{
 		min-height: 10rem;
-		margin-bottom: 2rem;
+		margin-bottom: 2.5rem;
 		position: relative;
 
 		h4 {
@@ -1175,7 +1207,7 @@ form {
 			height: 180px;
 
 			@include media-breakpoint-up(xl) {
-				height: 210px;
+				height: 250px;
 			}
 		}
 
@@ -1228,7 +1260,7 @@ form {
 			}
 		}
 
-		&:hover .add-favs{
+		&:hover .add-favs {
 			opacity: 1;
 		}
 
@@ -1237,12 +1269,12 @@ form {
 			border: none;
 
 			.price, .new-price{
-				// padding-top: 1rem;
-				font-size: 1.23rem;
+				font-size: $h4-size;
+				font-weight: 400;
 				color: $base-text-color;
-				font-weight: 500;
 			}
 		}
+		
 	}
 
 	&.owl-carousel {
@@ -1257,19 +1289,50 @@ form {
 		margin-right: -15px;
 
 		.item{
-			@include media-breakpoint-down(md) {
-				@include make-col(6);
-			}
-			@include media-breakpoint-up(md) {
-				@include make-col(4);
-			}
 			@include media-breakpoint-up(xl) {
 				@include make-col(3);
 			}
+			@include media-breakpoint-down(xl) {
+				@include make-col(4);
+			}
+			@include media-breakpoint-down(md) {
+				@include make-col(6);
+			}
+			// @include media-breakpoint-down(xs) {
+			// 	@include make-col(12);
+			// }
 
 			padding-right: 15px;
 			padding-left: 15px;
 		}
+
+		.pic{
+			@include media-breakpoint-down(xl) {
+				height: 250px;
+			}
+			@include media-breakpoint-down(md) {
+				height: 280px;
+			}
+			// @include media-breakpoint-down(xs) {
+			// 	height: 350px;
+			// }
+		}
+	}
+}
+
+.buy-btns{
+	padding-top: 1em;
+	margin-bottom: 1em;
+
+	.cart{
+		display: inline-block;
+		margin-bottom: .25em;
+		margin-right: .5em;
+	}
+
+	.buy-1-click{
+		display: inline-block;
+		margin-left: .25em;
 	}
 }
 
