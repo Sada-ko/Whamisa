@@ -975,31 +975,6 @@ form {
 	font-size: 80%;
 }
 
-.skin-types{
-	margin-bottom: 1.5rem;
-
-	.skin-type{
-		display: inline-block;
-		color: $base-crimson;
-		border: 1px solid transparentize($base-crimson, .5);
-		padding: .1em .15em;
-		border-radius: .25rem;
-		line-height: 1;
-	}
-
-	&.full{
-		.skin-type{
-			display: inline-block;
-			color: white;
-			border: 1px solid transparentize($base-crimson, .5);
-			padding: .25em;
-			border-radius: .25rem;
-			line-height: 1;
-			background-color: $base-crimson;
-		}
-	}
-}
-
 .price{
 	// font-size: 2.25rem;
 	font-weight: 500;
@@ -1211,6 +1186,16 @@ form {
 			}
 		}
 
+		.catalogue-base-link{
+			display: block;
+			border: none;
+
+			.price, .new-price{
+				font-size: $h4-size;
+				font-weight: 400;
+				color: $base-text-color;
+			}
+		}
 		.add-favs{
 			position: absolute;
 			background-color: white;
@@ -1264,17 +1249,50 @@ form {
 			opacity: 1;
 		}
 
-		.catalogue-base-link{
-			display: block;
-			border: none;
+		.bestseller{
+			display: inline-block;
+			color: $base-crimson;
+			margin-right: .3rem;
+			transition: .2s;
 
-			.price, .new-price{
-				font-size: $h4-size;
-				font-weight: 400;
-				color: $base-text-color;
+			&:hover {
+				color: $red;
 			}
 		}
-		
+	}
+
+	.skin-types{
+		display: inline-block;
+		margin-bottom: 1.5rem;
+
+		.skin-type{
+			display: inline-block;
+			color: $base-crimson;
+			border: 1px solid transparentize($base-crimson, .5);
+			padding: .1em .15em;
+			border-radius: .25rem;
+			line-height: 1;
+
+			&.dry{
+				color: transparentize($base-crimson, .5);
+			}
+
+			&.fat{
+				font-weight: 700;
+			}
+		}
+
+		&.full{
+			.skin-type{
+				display: inline-block;
+				color: white;
+				border: 1px solid transparentize($base-crimson, .5);
+				padding: .25em;
+				border-radius: .25rem;
+				line-height: 1;
+				background-color: $base-crimson;
+			}
+		}
 	}
 
 	&.owl-carousel {
