@@ -66,11 +66,11 @@ gulp.task('browser-sync', function () {
 // Styles build​
 gulp.task('style:build', function () {
     var processors = [
-    momentumscrolling
+        momentumscrolling
     ];
 
-    gulp.src(path.src.style) //Выберем наш main.scss
-    .pipe(sourcemaps.init())
+    gulp.src(path.src.style)
+        .pipe(sourcemaps.init())
         .pipe(sass()) //Скомпилируем
         .pipe(cssimport())
         .pipe(autoprefixer({
