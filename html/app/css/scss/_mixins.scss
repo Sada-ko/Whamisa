@@ -1,4 +1,4 @@
-//Ссылки
+// Links
 @mixin link-style($link-color, $link-hover-color) {
   text-decoration: none;
   // font-weight: normal !important;
@@ -49,7 +49,6 @@
     border: none;
     color: $red;
   }
-
 }
 
 @mixin inside-link-style($link-color, $link-hover-color) {
@@ -86,6 +85,7 @@
   }
 }
 
+// Buttons hovering etc
 @mixin btn-colors($base-button) {
   &:hover {
     background-color: darken($base-button, 15%);
@@ -110,6 +110,7 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=0 ); /* IE6-9 */
 }
 
+// Zooming pics
 @mixin full-fit {
   position: absolute;
   width: 100%;
@@ -132,6 +133,7 @@
   }
 }
 
+// For IE 10-11
 @mixin target-metro {
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     @content;

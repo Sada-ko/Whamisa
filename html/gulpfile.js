@@ -14,6 +14,7 @@
     uglify            = require('gulp-uglify'), // модуль для минимизации JavaScript
     postcss           = require('gulp-postcss'),
     momentumscrolling = require('postcss-momentum-scrolling'),
+    sourcemaps        = require('gulp-sourcemaps'),
 
     
     
@@ -69,6 +70,7 @@ gulp.task('style:build', function () {
     ];
 
     gulp.src(path.src.style) //Выберем наш main.scss
+    .pipe(sourcemaps.init())
         .pipe(sass()) //Скомпилируем
         .pipe(cssimport())
         .pipe(autoprefixer({
@@ -78,6 +80,7 @@ gulp.task('style:build', function () {
 
         .pipe(postcss(processors))
         .pipe(cssnano())
+        .pipe(sourcemaps.write())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(path.build.css)) //И в build
         .pipe(browserSync.reload({stream: true}));
@@ -104,10 +107,10 @@ gulp.task('image:build', function () {
             }),
             pngquant(),
             imagemin.svgo({plugins: [{removeViewBox: false}]})
-        ])))
+            ])))
         .pipe(gulp.dest(path.build.img)) // выгрузка готовых файлов
         .pipe(browserSync.reload({stream: true})); //И перезагрузим сервер})
-});
+    });
 
 // HTML build
 gulp.task('html:build', function () {
