@@ -26,6 +26,38 @@
 </head>
 
 <body>
+	
+	<!-- TOP ALERT -->
+	<!-- Надо добавить класс show для того, чтобы он вылез -->
+	<div class="alert alert-top alert-dismissible fade color-invert" role="alert">
+
+		<!-- Форма для подписки на рассылку -->
+		<div class="container subscribe-form">
+			<div class="declare">
+				<i class="fas fa-gift fa-lg mr-1" data-fa-transform="shrink-2"></i>
+				Получите 15%&nbsp;скидки на&nbsp;первый заказ!
+				<i class="fas fa-gift fa-lg ml-1" data-fa-transform="shrink-2"></i>
+			</div>
+
+			<form class="form-inline mt-md-0">
+				<input class="form-control form-control-sm mr-sm-2" type="email" placeholder="Электронная почта" aria-label="email" type="text">
+				<button class="btn btn-sm btn-danger my-2 my-sm-0" type="submit">Подписаться</button>
+			</form>
+			
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+
+		<!-- Если подписался, выводим ЭТО (убираем класс d-none) -->
+		<div class="container subscribe-ok d-none">
+			<div class="py-2 text-center">
+				<i class="fas fa-badge-check fa-lg mr-1" data-fa-transform="shrink-2"></i>
+				Всё супер, вы&nbsp;подписались!
+			</div>
+		</div>
+	</div>
+
 
 	<header>
 	
@@ -224,272 +256,302 @@
 				<div class="item">
 
 					<!-- FAVORITE -->
-						<a href="#" class="add-favs">
-							<div class="position-relative">
-								<i class="fal fa-heart fa-lg empty"></i>
-								<i class="fas fa-heart fa-lg full"></i>
-							</div>
-						</a>
-						<a class="catalogue-base-link" href="#">
-							<div class="pic">
-								<div class="zoom-background">
-									<div class="zoom-pic">
-										<img class="fill-box" src="img/owl-item-1.jpg">
-									</div>
+					<a href="#" class="add-favs">
+						<div class="position-relative">
+							<i class="fal fa-heart fa-lg empty"></i>
+							<i class="fas fa-heart fa-lg full"></i>
+						</div>
+					</a>
+					<a class="catalogue-base-link" href="#">
+						<div class="pic">
+							<div class="zoom-background">
+								<div class="zoom-pic">
+									<img class="fill-box" src="img/owl-item-1.jpg">
 								</div>
 							</div>
-							<h4>Тонер на основе цветочных ферментов</h4>
-							<div class="original-name text-muted">
-								Flower toner
-							</div>
-							<div class="price">
-								<span class="new-price">3300&nbsp;₽</span> 
-							</div>
-						</a>
-
-						<div class="buy-btns">
-							<a class="cart btn btn-primary btn-sm" href="#" role="button">
-								<i class="fal fa-cart-arrow-down mr-1" data-fa-transform="grow-2 down-1 right-2"></i>
-								В&nbsp;корзину
-							</a>
-							<a class="buy-1-click inside small nowrap" href="#" role="button">
-								<i class="fal fa-hand-pointer fa-lg mr-1" data-fa-transform="right-1"></i>
-								<span>в&nbsp;1&nbsp;клик</span>
-							</a>
 						</div>
+						<h4>Тонер на основе цветочных ферментов</h4>
+						<div class="original-name text-muted">
+							Flower toner
+						</div>
+						<div class="price">
+							<span class="new-price">3300&nbsp;₽</span> 
+						</div>
+					</a>
+
+					<div class="buy-btns">
+						<a class="cart btn btn-primary btn-sm" href="#" role="button">
+							<i class="fal fa-cart-arrow-down mr-1" data-fa-transform="grow-2 down-1 right-2"></i>
+							В&nbsp;корзину
+						</a>
+						<a class="buy-1-click inside small nowrap" href="#" role="button">
+							<i class="fal fa-hand-pointer fa-lg mr-1" data-fa-transform="right-1"></i>
+							<span>в&nbsp;1&nbsp;клик</span>
+						</a>
+					</div>
 				</div>
 
 				<div class="item">
 
 					<!-- FAVORITE -->
-						<a href="#" class="add-favs">
-							<div class="position-relative">
-								<i class="fal fa-heart fa-lg empty"></i>
-								<i class="fas fa-heart fa-lg full"></i>
-							</div>
-						</a>
-						<a class="catalogue-base-link" href="#">
-							<div class="pic">
-								<div class="zoom-background">
-									<div class="zoom-pic">
-										<img class="fill-box" src="img/owl-item-1.jpg">
-									</div>
+					<a href="#" class="add-favs">
+						<div class="position-relative">
+							<i class="fal fa-heart fa-lg empty"></i>
+							<i class="fas fa-heart fa-lg full"></i>
+						</div>
+					</a>
+					<a class="catalogue-base-link" href="#">
+						<div class="pic">
+							<div class="zoom-background">
+								<div class="zoom-pic">
+									<img class="fill-box" src="img/owl-item-1.jpg">
 								</div>
 							</div>
-							<h4>Тонер на основе цветочных ферментов</h4>
-							<div class="original-name text-muted">
-								Flower toner
-							</div>
-							<div class="price">
-								<span class="new-price">3300&nbsp;₽</span> 
-							</div>
-						</a>
-
-						<div class="buy-btns">
-							<a class="cart btn btn-primary btn-sm" href="#" role="button">
-								<i class="fal fa-cart-arrow-down mr-1" data-fa-transform="grow-2 down-1 right-2"></i>
-								В&nbsp;корзину
-							</a>
-							<a class="buy-1-click inside small" href="#" role="button">
-								<i class="fal fa-hand-pointer fa-lg mr-1" data-fa-transform="right-1"></i>
-								<span>в&nbsp;1&nbsp;клик</span>
-							</a>
 						</div>
+						<h4>Тонер на основе цветочных ферментов</h4>
+						<div class="original-name text-muted">
+							Flower toner
+						</div>
+						<div class="price">
+							<span class="new-price">3300&nbsp;₽</span> 
+						</div>
+					</a>
+
+					<div class="buy-btns">
+						<a class="cart btn btn-primary btn-sm" href="#" role="button">
+							<i class="fal fa-cart-arrow-down mr-1" data-fa-transform="grow-2 down-1 right-2"></i>
+							В&nbsp;корзину
+						</a>
+						<a class="buy-1-click inside small" href="#" role="button">
+							<i class="fal fa-hand-pointer fa-lg mr-1" data-fa-transform="right-1"></i>
+							<span>в&nbsp;1&nbsp;клик</span>
+						</a>
+					</div>
 				</div>
 
 				<div class="item">
 
 					<!-- FAVORITE -->
-						<a href="#" class="add-favs">
-							<div class="position-relative">
-								<i class="fal fa-heart fa-lg empty"></i>
-								<i class="fas fa-heart fa-lg full"></i>
-							</div>
-						</a>
-						<a class="catalogue-base-link" href="#">
-							<div class="pic">
-								<div class="zoom-background">
-									<div class="zoom-pic">
-										<img class="fill-box" src="img/owl-item-1.jpg">
-									</div>
+					<a href="#" class="add-favs">
+						<div class="position-relative">
+							<i class="fal fa-heart fa-lg empty"></i>
+							<i class="fas fa-heart fa-lg full"></i>
+						</div>
+					</a>
+					<a class="catalogue-base-link" href="#">
+						<div class="pic">
+							<div class="zoom-background">
+								<div class="zoom-pic">
+									<img class="fill-box" src="img/owl-item-1.jpg">
 								</div>
 							</div>
-							<h4>Тонер на основе цветочных ферментов</h4>
-							<div class="original-name text-muted">
-								Flower toner
-							</div>
-							<div class="price">
-								<span class="new-price">3300&nbsp;₽</span> 
-							</div>
-						</a>
-
-						<div class="buy-btns">
-							<a class="cart btn btn-primary btn-sm" href="#" role="button">
-								<i class="fal fa-cart-arrow-down mr-1" data-fa-transform="grow-2 down-1 right-2"></i>
-								В&nbsp;корзину
-							</a>
-							<a class="buy-1-click inside small" href="#" role="button">
-								<i class="fal fa-hand-pointer fa-lg mr-1" data-fa-transform="right-1"></i>
-								<span>в&nbsp;1&nbsp;клик</span>
-							</a>
 						</div>
+						<h4>Тонер на основе цветочных ферментов</h4>
+						<div class="original-name text-muted">
+							Flower toner
+						</div>
+						<div class="price">
+							<span class="new-price">3300&nbsp;₽</span> 
+						</div>
+					</a>
+
+					<div class="buy-btns">
+						<a class="cart btn btn-primary btn-sm" href="#" role="button">
+							<i class="fal fa-cart-arrow-down mr-1" data-fa-transform="grow-2 down-1 right-2"></i>
+							В&nbsp;корзину
+						</a>
+						<a class="buy-1-click inside small" href="#" role="button">
+							<i class="fal fa-hand-pointer fa-lg mr-1" data-fa-transform="right-1"></i>
+							<span>в&nbsp;1&nbsp;клик</span>
+						</a>
+					</div>
 				</div>
 
 				<div class="item">
 
 					<!-- FAVORITE -->
-						<a href="#" class="add-favs">
-							<div class="position-relative">
-								<i class="fal fa-heart fa-lg empty"></i>
-								<i class="fas fa-heart fa-lg full"></i>
-							</div>
-						</a>
-						<a class="catalogue-base-link" href="#">
-							<div class="pic">
-								<div class="zoom-background">
-									<div class="zoom-pic">
-										<img class="fill-box" src="img/owl-item-1.jpg">
-									</div>
+					<a href="#" class="add-favs">
+						<div class="position-relative">
+							<i class="fal fa-heart fa-lg empty"></i>
+							<i class="fas fa-heart fa-lg full"></i>
+						</div>
+					</a>
+					<a class="catalogue-base-link" href="#">
+						<div class="pic">
+							<div class="zoom-background">
+								<div class="zoom-pic">
+									<img class="fill-box" src="img/owl-item-1.jpg">
 								</div>
 							</div>
-							<h4>Тонер на основе цветочных ферментов</h4>
-							<div class="original-name text-muted">
-								Flower toner
-							</div>
-							<div class="price">
-								<span class="new-price">3300&nbsp;₽</span> 
-							</div>
-						</a>
-
-						<div class="buy-btns">
-							<a class="cart btn btn-primary btn-sm" href="#" role="button">
-								<i class="fal fa-cart-arrow-down mr-1" data-fa-transform="grow-2 down-1 right-2"></i>
-								В&nbsp;корзину
-							</a>
-							<a class="buy-1-click inside small" href="#" role="button">
-								<i class="fal fa-hand-pointer fa-lg mr-1" data-fa-transform="right-1"></i>
-								<span>в&nbsp;1&nbsp;клик</span>
-							</a>
 						</div>
+						<h4>Тонер на основе цветочных ферментов</h4>
+						<div class="original-name text-muted">
+							Flower toner
+						</div>
+						<div class="price">
+							<span class="new-price">3300&nbsp;₽</span> 
+						</div>
+					</a>
+
+					<div class="buy-btns">
+						<a class="cart btn btn-primary btn-sm" href="#" role="button">
+							<i class="fal fa-cart-arrow-down mr-1" data-fa-transform="grow-2 down-1 right-2"></i>
+							В&nbsp;корзину
+						</a>
+						<a class="buy-1-click inside small" href="#" role="button">
+							<i class="fal fa-hand-pointer fa-lg mr-1" data-fa-transform="right-1"></i>
+							<span>в&nbsp;1&nbsp;клик</span>
+						</a>
+					</div>
 				</div>
 
 				<div class="item">
 
 					<!-- FAVORITE -->
-						<a href="#" class="add-favs">
-							<div class="position-relative">
-								<i class="fal fa-heart fa-lg empty"></i>
-								<i class="fas fa-heart fa-lg full"></i>
-							</div>
-						</a>
-						<a class="catalogue-base-link" href="#">
-							<div class="pic">
-								<div class="zoom-background">
-									<div class="zoom-pic">
-										<img class="fill-box" src="img/owl-item-1.jpg">
-									</div>
+					<a href="#" class="add-favs">
+						<div class="position-relative">
+							<i class="fal fa-heart fa-lg empty"></i>
+							<i class="fas fa-heart fa-lg full"></i>
+						</div>
+					</a>
+					<a class="catalogue-base-link" href="#">
+						<div class="pic">
+							<div class="zoom-background">
+								<div class="zoom-pic">
+									<img class="fill-box" src="img/owl-item-1.jpg">
 								</div>
 							</div>
-							<h4>Тонер на основе цветочных ферментов</h4>
-							<div class="original-name text-muted">
-								Flower toner
-							</div>
-							<div class="price">
-								<span class="new-price">3300&nbsp;₽</span> 
-							</div>
-						</a>
-
-						<div class="buy-btns">
-							<a class="cart btn btn-primary btn-sm" href="#" role="button">
-								<i class="fal fa-cart-arrow-down mr-1" data-fa-transform="grow-2 down-1 right-2"></i>
-								В&nbsp;корзину
-							</a>
-							<a class="buy-1-click inside small" href="#" role="button">
-								<i class="fal fa-hand-pointer fa-lg mr-1" data-fa-transform="right-1"></i>
-								<span>в&nbsp;1&nbsp;клик</span>
-							</a>
 						</div>
+						<h4>Тонер на основе цветочных ферментов</h4>
+						<div class="original-name text-muted">
+							Flower toner
+						</div>
+						<div class="price">
+							<span class="new-price">3300&nbsp;₽</span> 
+						</div>
+					</a>
+
+					<div class="buy-btns">
+						<a class="cart btn btn-primary btn-sm" href="#" role="button">
+							<i class="fal fa-cart-arrow-down mr-1" data-fa-transform="grow-2 down-1 right-2"></i>
+							В&nbsp;корзину
+						</a>
+						<a class="buy-1-click inside small" href="#" role="button">
+							<i class="fal fa-hand-pointer fa-lg mr-1" data-fa-transform="right-1"></i>
+							<span>в&nbsp;1&nbsp;клик</span>
+						</a>
+					</div>
 				</div>
 
 				<div class="item">
 
 					<!-- FAVORITE -->
-						<a href="#" class="add-favs">
-							<div class="position-relative">
-								<i class="fal fa-heart fa-lg empty"></i>
-								<i class="fas fa-heart fa-lg full"></i>
-							</div>
-						</a>
-						<a class="catalogue-base-link" href="#">
-							<div class="pic">
-								<div class="zoom-background">
-									<div class="zoom-pic">
-										<img class="fill-box" src="img/owl-item-1.jpg">
-									</div>
+					<a href="#" class="add-favs">
+						<div class="position-relative">
+							<i class="fal fa-heart fa-lg empty"></i>
+							<i class="fas fa-heart fa-lg full"></i>
+						</div>
+					</a>
+					<a class="catalogue-base-link" href="#">
+						<div class="pic">
+							<div class="zoom-background">
+								<div class="zoom-pic">
+									<img class="fill-box" src="img/owl-item-1.jpg">
 								</div>
 							</div>
-							<h4>Тонер на основе цветочных ферментов</h4>
-							<div class="original-name text-muted">
-								Flower toner
-							</div>
-							<div class="price">
-								<span class="new-price">3300&nbsp;₽</span> 
-							</div>
-						</a>
-
-						<div class="buy-btns">
-							<a class="cart btn btn-primary btn-sm" href="#" role="button">
-								<i class="fal fa-cart-arrow-down mr-1" data-fa-transform="grow-2 down-1 right-2"></i>
-								В&nbsp;корзину
-							</a>
-							<a class="buy-1-click inside small" href="#" role="button">
-								<i class="fal fa-hand-pointer fa-lg mr-1" data-fa-transform="right-1"></i>
-								<span>в&nbsp;1&nbsp;клик</span>
-							</a>
 						</div>
+						<h4>Тонер на основе цветочных ферментов</h4>
+						<div class="original-name text-muted">
+							Flower toner
+						</div>
+						<div class="price">
+							<span class="new-price">3300&nbsp;₽</span> 
+						</div>
+					</a>
+
+					<div class="buy-btns">
+						<a class="cart btn btn-primary btn-sm" href="#" role="button">
+							<i class="fal fa-cart-arrow-down mr-1" data-fa-transform="grow-2 down-1 right-2"></i>
+							В&nbsp;корзину
+						</a>
+						<a class="buy-1-click inside small" href="#" role="button">
+							<i class="fal fa-hand-pointer fa-lg mr-1" data-fa-transform="right-1"></i>
+							<span>в&nbsp;1&nbsp;клик</span>
+						</a>
+					</div>
 				</div>
 
 				<div class="item">
 
 					<!-- FAVORITE -->
-						<a href="#" class="add-favs">
-							<div class="position-relative">
-								<i class="fal fa-heart fa-lg empty"></i>
-								<i class="fas fa-heart fa-lg full"></i>
-							</div>
-						</a>
-						<a class="catalogue-base-link" href="#">
-							<div class="pic">
-								<div class="zoom-background">
-									<div class="zoom-pic">
-										<img class="fill-box" src="img/owl-item-1.jpg">
-									</div>
+					<a href="#" class="add-favs">
+						<div class="position-relative">
+							<i class="fal fa-heart fa-lg empty"></i>
+							<i class="fas fa-heart fa-lg full"></i>
+						</div>
+					</a>
+					<a class="catalogue-base-link" href="#">
+						<div class="pic">
+							<div class="zoom-background">
+								<div class="zoom-pic">
+									<img class="fill-box" src="img/owl-item-1.jpg">
 								</div>
 							</div>
-							<h4>Тонер на основе цветочных ферментов</h4>
-							<div class="original-name text-muted">
-								Flower toner
-							</div>
-							<div class="price">
-								<span class="new-price">3300&nbsp;₽</span> 
-							</div>
-						</a>
-
-						<div class="buy-btns">
-							<a class="cart btn btn-primary btn-sm" href="#" role="button">
-								<i class="fal fa-cart-arrow-down mr-1" data-fa-transform="grow-2 down-1 right-2"></i>
-								В&nbsp;корзину
-							</a>
-							<a class="buy-1-click inside small" href="#" role="button">
-								<i class="fal fa-hand-pointer fa-lg mr-1" data-fa-transform="right-1"></i>
-								<span>в&nbsp;1&nbsp;клик</span>
-							</a>
 						</div>
-				</div>
+						<h4>Тонер на основе цветочных ферментов</h4>
+						<div class="original-name text-muted">
+							Flower toner
+						</div>
+						<div class="price">
+							<span class="new-price">3300&nbsp;₽</span> 
+						</div>
+					</a>
 
+					<div class="buy-btns">
+						<a class="cart btn btn-primary btn-sm" href="#" role="button">
+							<i class="fal fa-cart-arrow-down mr-1" data-fa-transform="grow-2 down-1 right-2"></i>
+							В&nbsp;корзину
+						</a>
+						<a class="buy-1-click inside small" href="#" role="button">
+							<i class="fal fa-hand-pointer fa-lg mr-1" data-fa-transform="right-1"></i>
+							<span>в&nbsp;1&nbsp;клик</span>
+						</a>
+					</div>
+				</div>
 			</div>
 
 			<hr/>
+			<!-- ROSE FORM -->
+		</div>
+
+		<div class="sakura-bg py-5 mb-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-md-5 offset-md-1">
+						<h4>Вступайте в&nbsp;<i class="fas fa-seedling crimson fa-sm"></i>&nbsp;Клуб лояльности Whamisa</h4>
+						<p>И&nbsp;мы&nbsp;будем рассказывать вам об&nbsp;актуальных акциях и&nbsp;предложениях раньше всех.</p>
+					</div>
+					<div class="col-12 col-md-5">
+						<form class="inverted">
+							<div class="form-group">
+								<input class="form-control mr-sm-2" type="email" placeholder="Электронная почта" aria-label="email" type="text">
+							</div>
+							<button class="btn btn-danger my-2 my-sm-0" type="submit">Вступить</button>
+						</form>
+
+
+						<div class="container subscribe-ok d-none">
+							<div class="h3">
+								<i class="fas fa-badge-check crimson fa-lg mr-1" data-fa-transform="shrink-2"></i>
+								Поздравляем, вы&nbsp;вступили в&nbsp;Клуб!
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="full-article container">
 
 			<div class="card-item-wrapper d-flex flex-column d-lg-block">
 
@@ -821,7 +883,7 @@
 		</div>
 	</main>
 
-	<footer class="footer">
+	<footer class="footer sakura-bg">
 		<div class="container">
 			<div class="row">
 	

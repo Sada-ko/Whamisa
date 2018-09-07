@@ -28,9 +28,7 @@ $(document).ready(function () {
 $('.new-items .owl-carousel').owlCarousel({
 	loop:true,
 	margin:15,
-	// autoplay:true,
-	// navContainerClass:"owl-nav",
-	// navClass:["carousel-control-prev","carousel-control-next"],	
+	autoplay:true,
 	navText: ["<i class='fal fa-angle-left fa-2x' aria-hidden='true'></i>","<i class='fal fa-angle-right fa-2x' aria-hidden='true'></i>"],
 	nav:true,
 	responsive:{
@@ -46,17 +44,6 @@ $('.new-items .owl-carousel').owlCarousel({
 	}
 })
 
-$('.owl-carousel.articles-tease').owlCarousel({
-	loop:true,
-	autoplay:true,
-	animateOut: 'fadeOut',
-	animateIn: 'fadeIn',
-	navText: ["<i class='fal fa-angle-left fa-2x' aria-hidden='true'></i>","<i class='fal fa-angle-right fa-2x' aria-hidden='true'></i>"],
-	// nav:true,
-	autoplayTimeout:20000,
-	items:1,
-})
-
 $('.owl-carousel.main-carousel').owlCarousel({
 	loop:true,
 	autoplay:true,
@@ -65,6 +52,17 @@ $('.owl-carousel.main-carousel').owlCarousel({
 	autoplayTimeout:20000,
 	items:1,
 })
+
+$('.week-offer .owl-carousel').owlCarousel({
+	loop:true,
+	autoplay:true,
+	navText: ["<i class='fal fa-angle-left fa-2x' aria-hidden='true'></i>","<i class='fal fa-angle-right fa-2x' aria-hidden='true'></i>"],
+	nav:true,
+	dots:false,
+	items:1,
+})
+
+
 
 // FORM VALIDATION
 // Example starter JavaScript for disabling form submissions if there are invalid fields

@@ -549,7 +549,20 @@ h1 + h2, h2 + h3, h3 + h4, h4 + h5 {
 	}
 }
 
-.adv-block{
+.adv-block-wrapper{
+
+	.adv-block{
+		@include media-breakpoint-down(lg) {
+			@include make-col(12);
+			padding: 0 15px;
+		}
+
+		@include media-breakpoint-up(lg) {
+			@include make-col(8);
+			@include make-col-offset(2);
+		}
+	}
+
 	.adv-block-head{
 		text-align: center;
 		font-size: 1rem;
@@ -638,6 +651,15 @@ h1 + h2, h2 + h3, h3 + h4, h4 + h5 {
 	color: $base-crimson !important;
 }
 
+.sakura-bg{
+	background-image: url('../img/rose-pattern-bg.jpg');
+	background-size: auto 100%;
+
+	@include media-breakpoint-up(lg) {
+		background-size: cover;
+	}
+}
+
 ul {
 	li{
 		margin-bottom: .5em;
@@ -695,7 +717,6 @@ form {
 
 		.invalid-feedback {
 			width: 80%;
-			// display: block;
 			position: absolute;
 			font-size: 65%;
 			color: $red;
@@ -714,6 +735,10 @@ form {
 	.form-control {
 		border: none;
 		background-color: transparentize($text-muted-color, .75);
+	}
+
+	&.inverted .form-control {
+		background-color: transparentize(white, .5);
 	}
 
 	&.search-form {
@@ -914,15 +939,6 @@ form {
 	.adv-block-content{
 		border: none;
 
-		@include media-breakpoint-down(lg) {
-			@include make-col(12);
-		}
-
-		@include media-breakpoint-up(lg) {
-			@include make-col(8);
-			@include make-col-offset(2);
-		}
-
 		&:hover .zoom-pic {
 			transform: scale(1.05);
 		}
@@ -1024,9 +1040,6 @@ form {
 	// 		font-size: 1.25rem;
 	// 	}
 	// }
-}
-
-.articles-tease{
 
 	.pic, .carousel-caption{
 		min-height: 400px;
@@ -1134,6 +1147,7 @@ form {
 
 	.owl-dots{
 		padding-top: 1rem;
+		width: 100%;
 
 		.owl-dot{
 			span{	
@@ -1261,6 +1275,7 @@ form {
 			color: $base-crimson;
 			margin-right: .3rem;
 			transition: .2s;
+			margin-bottom: 1.5rem;
 
 			&:hover {
 				color: $red;
@@ -1401,14 +1416,11 @@ form {
 }
 
 .footer {
-	background-image: url('../img/rose-pattern-bg.jpg');
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	background-size: auto 100%;
 
 	@include media-breakpoint-up(lg) {
-		background-size: cover;
 		padding-top: 40px;
 		height: 280px;
 	}
