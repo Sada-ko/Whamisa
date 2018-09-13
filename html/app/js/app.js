@@ -49,7 +49,8 @@ $('.owl-carousel.main-carousel').owlCarousel({
 	autoplay:true,
 	navText: ["<i class='fal fa-angle-left fa-2x' aria-hidden='true'></i>","<i class='fal fa-angle-right fa-2x' aria-hidden='true'></i>"],
 	nav:true,
-	autoplayTimeout:20000,
+	smartSpeed: 1000,
+	autoplayTimeout:8000,
 	items:1,
 })
 

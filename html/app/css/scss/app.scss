@@ -843,8 +843,8 @@ form {
 	&.carousel-slim{
 
 		@include media-breakpoint-down(sm) {	
-			margin-left: -15px;
-			margin-right: -15px;
+			// margin-left: -15px;
+			// margin-right: -15px;
 		}
 
 		.carousel-control-next {
