@@ -1112,6 +1112,10 @@ form {
 
 // OWL-CAROUSEL
 .owl-carousel{
+
+	&:not(.owl-loaded){
+		opacity:0;
+	}
 	
 	.owl-nav{
 		@include media-breakpoint-down(sm) {
