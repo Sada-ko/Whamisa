@@ -1265,13 +1265,15 @@ form {
 			}
 
 			&:hover{
-				.empty{
-					opacity: 0;
-					transition: .2s;
-				}
+				@include media-breakpoint-up(lg) {
+					.empty{
+						opacity: 1;
+						transition: .2s;
+					}
 
-				.full{
-					opacity: 1;
+					.full{
+						opacity: .5;
+					}
 				}
 			}
 		}
