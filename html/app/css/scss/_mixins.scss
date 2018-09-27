@@ -1,141 +1,141 @@
 // Links
 @mixin link-style($link-color, $link-hover-color) {
-  text-decoration: none;
+	text-decoration: none;
   // font-weight: normal !important;
   color: $link-color;
   border-bottom: 1px solid transparentize($link-color, .7);
   transition: .2s;
 
   &.dotted{
-    border-bottom-style: dotted !important;
+  	border-bottom-style: dotted !important;
   }
 
   &:hover {
-    color: $link-hover-color;
-    border-bottom-color: transparentize($link-hover-color, .7) !important;
-    text-decoration: none;
+  	color: $link-hover-color;
+  	border-bottom-color: transparentize($link-hover-color, .7) !important;
+  	text-decoration: none;
   }
 
   &.btn, &.btn:hover {
-    border: none;
+  	border: none;
   }
 
   //Серые ссылки
   & .text-muted {
-    border-bottom-color: transparentize($text-muted, .3) !important;
+  	border-bottom-color: transparentize($text-muted, .3) !important;
   }
 
   &:active {
-    color: $link-active-color;
-    border-bottom-color: transparentize($link-active-color, .4);
+  	color: $link-active-color;
+  	border-bottom-color: transparentize($link-active-color, .4);
   }
 
   &:focus{
-   color: $link-color;
- }
-
- &.disabled, .disabled & {
-  border: none;
-  cursor: default;
-  &:hover {
-    color: $text-muted;
+  	color: $link-color;
   }
-}
 
-&.active, .active > &, &.show > a {
+  &.disabled, .disabled & {
+  	border: none;
+  	cursor: default;
+  	&:hover {
+  		color: $text-muted;
+  	}
+  }
+
+  &.active, .active > &, &.show > a {
   // &.active, .active > &, .show > & {
-    cursor: default;
+  	cursor: default;
     // font-weight: bold;
     border: none;
     color: $red;
-  }
+}
 }
 
 @mixin inside-link-style($link-color, $link-hover-color) {
-  text-decoration: none;
-  color: $link-color;
-  border: none;
+	text-decoration: none;
+	color: $link-color;
+	border: none;
 
-  span {
-    border-bottom: 1px solid transparentize($link-color, .7);
-    transition: .2s;
-    &.text-muted {
-      border-bottom-color: transparentize($text-muted, .7);
-    }
-  }
-  &.dotted{
-    span {
-      border-bottom-style: dotted !important;
-    }
-  }
-  &:hover {
-    transition: .2s;
-    color: $link-hover-color !important;
-    text-decoration: none;
-    span {
-      color: $link-hover-color !important;
-      border-bottom-color: transparentize($link-hover-color, .7) !important;
-    }
-  }
-  &:active {
-    color: $link-active-color;
-    span {
-      border-bottom-color: transparentize($link-hover-color, .4);
-    }
-  }
+	span {
+		border-bottom: 1px solid transparentize($link-color, .7);
+		transition: .2s;
+		&.text-muted {
+			border-bottom-color: transparentize($text-muted, .7);
+		}
+	}
+	&.dotted{
+		span {
+			border-bottom-style: dotted !important;
+		}
+	}
+	&:hover {
+		transition: .2s;
+		color: $link-hover-color !important;
+		text-decoration: none;
+		span {
+			color: $link-hover-color !important;
+			border-bottom-color: transparentize($link-hover-color, .7) !important;
+		}
+	}
+	&:active {
+		color: $link-active-color;
+		span {
+			border-bottom-color: transparentize($link-hover-color, .4);
+		}
+	}
 }
 
 // Buttons hovering etc
 @mixin btn-colors($base-button) {
-  &:hover {
-    background-color: darken($base-button, 15%);
-  }
-  
-  &:not(:disabled):not(.disabled).active,
-  &:not(:disabled):not(.disabled):active,
-  .show > &.dropdown-toggle {
-    color: #fff;
-    background-color: darken($base-button, 15%);
-    border-color: darken($base-button, 15%);
-  }
+	&:hover {
+		background-color: darken($base-button, 15%);
+	}
+	
+	&:not(:disabled):not(.disabled).active,
+	&:not(:disabled):not(.disabled):active,
+	.show > &.dropdown-toggle {
+		color: #fff;
+		background-color: darken($base-button, 15%);
+		border-color: darken($base-button, 15%);
+	}
 
-  &.focus,
-  &:focus {
-    box-shadow: 0 0 0 .2rem transparentize($base-button, .7);
-  }
+	&.focus,
+	&:focus {
+		box-shadow: 0 0 0 .2rem transparentize($base-button, .7);
+	}
 }
 
 @mixin gradient($from, $to) {
-  background: linear-gradient(to right,  $from 0%, $to 100%);
+	background: linear-gradient(to right,  $from 0%, $to 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=0 ); /* IE6-9 */
 }
 
 // Zooming pics
 @mixin full-fit {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
 }
 
 @mixin zoom-background {
-  @include full-fit;
-  overflow: hidden;
+	@include full-fit;
+	overflow: hidden;
 
-  .zoom-pic {
-    @include full-fit;
-    transition: .1s;
-  }
+	.zoom-pic {
+		@include full-fit;
+		transition: .1s;
+	}
 
-  &:hover .zoom-pic {
-    transform: scale(1.05);
-  }
+	&:hover .zoom-pic {
+		transform: scale(1.05);
+	}
 }
 
 // For IE 10-11
 @mixin target-metro {
-  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    @content;
-  }
+	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		@content;
+	}
 }
