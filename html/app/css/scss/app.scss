@@ -61,6 +61,11 @@ header {
 		li {
 			padding-left: 1rem;
 			list-style: none;
+			position: relative;
+			.badge {
+				position: absolute;
+				font-size: .8em;
+			}
 		}
 
 		.nav-link {
