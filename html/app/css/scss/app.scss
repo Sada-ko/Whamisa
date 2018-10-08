@@ -23,6 +23,10 @@ body {
 	}
 }
 
+.badge-danger {
+	background-color: $red;
+}
+
 header {
 	padding-top: 1rem;
 
@@ -57,14 +61,16 @@ header {
 	}
 
 	.icons-menu {
-
 		li {
 			padding-left: 1rem;
 			list-style: none;
 			position: relative;
 			.badge {
+				color: white !important;
 				position: absolute;
-				font-size: .8em;
+				font-size: .75em;
+				top: -5px;
+				right: 10%;
 			}
 		}
 
@@ -73,6 +79,9 @@ header {
 
 			&:hover {
 				color: $red;
+				.badge {
+					color: white !important;
+				}
 			}
 		}
 
